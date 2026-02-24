@@ -1,0 +1,356 @@
+export const appliances = [
+  {
+    slug: 'refrigerator',
+    name: 'Refrigerator',
+    title: 'Refrigerator Repair',
+    description: 'Expert refrigerator repair services in Texas',
+    image: '/assets/appliances/refrigerator.jpg',
+    services: [
+      'Not cooling properly',
+      'Ice maker not working',
+      'Water dispenser issues',
+      'Strange noises',
+      'Leaking water',
+      'Door seal replacement',
+      'Compressor repair',
+      'Thermostat issues'
+    ]
+  },
+  {
+    slug: 'washer',
+    name: 'Washer',
+    title: 'Washer Repair',
+    description: 'Professional washer repair services',
+    image: '/assets/appliances/washer.jpg',
+    services: [
+      'Won\'t spin or drain',
+      'Leaking water',
+      'Won\'t turn on',
+      'Making loud noises',
+      'Door won\'t lock',
+      'Not dispensing detergent',
+      'Unbalanced load issues',
+      'Control panel problems'
+    ]
+  },
+  {
+    slug: 'dryer',
+    name: 'Dryer',
+    title: 'Dryer Repair',
+    description: 'Fast and reliable dryer repair',
+    image: '/assets/appliances/dryer.jpg',
+    services: [
+      'Not heating',
+      'Won\'t start',
+      'Takes too long to dry',
+      'Making unusual noises',
+      'Door won\'t stay closed',
+      'Vent cleaning',
+      'Thermostat replacement',
+      'Belt replacement'
+    ]
+  },
+  {
+    slug: 'dishwasher',
+    name: 'Dishwasher',
+    title: 'Dishwasher Repair',
+    description: 'Dishwasher repair and maintenance',
+    image: '/assets/appliances/dishwasher.jpg',
+    services: [
+      'Not cleaning dishes',
+      'Not draining',
+      'Leaking water',
+      'Not filling with water',
+      'Unusual noises',
+      'Door latch problems',
+      'Spray arm issues',
+      'Heating element repair'
+    ]
+  },
+  {
+    slug: 'oven',
+    name: 'Oven/Stove',
+    title: 'Oven/Stove Repair',
+    description: 'Oven and stove repair services',
+    image: '/assets/appliances/oven.jpg',
+    services: [
+      'Not heating properly',
+      'Temperature issues',
+      'Door won\'t close',
+      'Self-cleaning problems',
+      'Igniter replacement',
+      'Thermostat repair',
+      'Control panel issues',
+      'Gas leak repair'
+    ]
+  },
+  {
+    slug: 'range',
+    name: 'Range',
+    title: 'Range Repair',
+    description: 'Range repair services',
+    image: '/assets/appliances/range.jpg',
+    services: [
+      'Burners not working',
+      'Oven not heating',
+      'Igniter problems',
+      'Temperature control issues',
+      'Gas smell',
+      'Electric element replacement',
+      'Control board repair',
+      'Door hinge problems'
+    ]
+  },
+  {
+    slug: 'cooktop',
+    name: 'Cooktop',
+    title: 'Cooktop Repair',
+    description: 'Cooktop repair and service',
+    image: '/assets/appliances/cooktop.jpg',
+    services: [
+      'Burners not igniting',
+      'Electric elements not working',
+      'Control knob issues',
+      'Gas smell',
+      'Spark module problems',
+      'Surface scratches repair',
+      'Wiring issues',
+      'Touch control problems'
+    ]
+  },
+  {
+    slug: 'freezer',
+    name: 'Freezer',
+    title: 'Freezer Repair',
+    description: 'Freezer repair services',
+    image: '/assets/appliances/freezer.jpg',
+    services: [
+      'Not freezing',
+      'Too much frost buildup',
+      'Unusual noises',
+      'Door seal problems',
+      'Temperature fluctuations',
+      'Compressor issues',
+      'Defrost system repair',
+      'Ice buildup'
+    ]
+  },
+  {
+    slug: 'range-hood',
+    name: 'Range Hood',
+    title: 'Range Hood Repair',
+    description: 'Range hood repair and maintenance',
+    image: '/assets/appliances/range-hood.jpg',
+    services: [
+      'Fan not working',
+      'Light not working',
+      'Poor ventilation',
+      'Unusual noises',
+      'Filter replacement',
+      'Motor issues',
+      'Control switch problems',
+      'Duct cleaning'
+    ]
+  },
+  {
+    slug: 'ice-maker',
+    name: 'Ice Maker',
+    title: 'Ice Maker Repair',
+    description: 'Ice maker repair services',
+    image: '/assets/appliances/ice-maker.jpg',
+    services: [
+      'Not making ice',
+      'Slow ice production',
+      'Ice tastes bad',
+      'Water leak',
+      'Ice cubes too small',
+      'Dispenser issues',
+      'Water filter replacement',
+      'Valve problems'
+    ]
+  },
+  {
+    slug: 'coffee-machine',
+    name: 'Coffee Machine',
+    title: 'Coffee Machine Repair',
+    description: 'Coffee machine repair services',
+    image: '/assets/appliances/microwave.jpg',
+    services: [
+      'Not brewing',
+      'Water not heating',
+      'Leaking water',
+      'Grinder not working',
+      'Milk frother issues',
+      'Descaling needed',
+      'Display problems',
+      'Pump issues'
+    ]
+  },
+  {
+    slug: 'double-oven',
+    name: 'Built-In Oven',
+    title: 'Built-In Oven Repair',
+    description: 'Built-in oven, double wall oven, built-in microoven, and oven/microwave combo repair',
+    image: '/assets/appliances/oven.jpg',
+    services: [
+      'Not heating properly',
+      'Temperature inconsistent',
+      'One oven not working',
+      'Door won\'t close',
+      'Control panel issues',
+      'Self-cleaning problems',
+      'Thermostat repair',
+      'Igniter replacement'
+    ]
+  },
+  {
+    slug: 'wine-cooler',
+    name: 'Wine Cooler',
+    title: 'Wine Cooler Repair',
+    description: 'Wine cooler and beverage refrigerator repair services',
+    image: '/assets/appliances/wine-cooler.jpg',
+    services: [
+      'Not cooling properly',
+      'Temperature fluctuations',
+      'Compressor issues',
+      'Door seal problems',
+      'Condensation buildup',
+      'Unusual noises',
+      'Display not working',
+      'Thermostat repair'
+    ]
+  }
+];
+
+export const commercialAppliances = [
+  {
+    slug: 'commercial-walk-in-refrigerator',
+    name: 'Commercial Walk-in Refrigerator',
+    title: 'Commercial Walk-in Refrigerator Repair',
+    description: 'Walk-in refrigerator and cold storage repair',
+    featured: true
+  },
+  {
+    slug: 'commercial-ice-maker',
+    name: 'Commercial Ice Maker',
+    title: 'Commercial Ice Maker Repair',
+    description: 'Commercial ice machine repair services',
+    featured: true
+  },
+  {
+    slug: 'commercial-pizza-oven',
+    name: 'Commercial Pizza Oven',
+    title: 'Commercial Pizza Oven Repair',
+    description: 'Pizza oven repair and maintenance',
+    featured: true
+  },
+  {
+    slug: 'commercial-mixer',
+    name: 'Commercial Mixer',
+    title: 'Commercial Mixer Repair',
+    description: 'Commercial mixer repair services',
+    featured: true
+  },
+  {
+    slug: 'commercial-cold-storage-room',
+    name: 'Cold Storage Room',
+    title: 'Cold Storage Room Repair',
+    description: 'Cold storage room repair and maintenance'
+  },
+  {
+    slug: 'commercial-reach-in-refrigerator',
+    name: 'Commercial Reach-In Refrigerator',
+    title: 'Commercial Reach-In Refrigerator Repair',
+    description: 'Reach-in refrigerator repair services'
+  },
+  {
+    slug: 'commercial-beer-chiller',
+    name: 'Commercial Beer Chiller',
+    title: 'Commercial Beer Chiller Repair',
+    description: 'Beer chiller and keg cooler repair'
+  },
+  {
+    slug: 'commercial-oven',
+    name: 'Commercial Oven',
+    title: 'Commercial Oven Repair',
+    description: 'Commercial oven repair and service'
+  },
+  {
+    slug: 'commercial-fryer',
+    name: 'Commercial Fryer',
+    title: 'Commercial Fryer Repair',
+    description: 'Commercial fryer repair services'
+  },
+  {
+    slug: 'commercial-hood',
+    name: 'Commercial Hood',
+    title: 'Commercial Hood Repair',
+    description: 'Commercial kitchen hood repair'
+  },
+  {
+    slug: 'commercial-skillet',
+    name: 'Commercial Skillet',
+    title: 'Commercial Skillet Repair',
+    description: 'Commercial skillet repair services'
+  },
+  {
+    slug: 'commercial-kettle',
+    name: 'Commercial Kettle',
+    title: 'Commercial Kettle Repair',
+    description: 'Commercial kettle repair and maintenance'
+  },
+  {
+    slug: 'commercial-coffee-machine',
+    name: 'Commercial Coffee Machine',
+    title: 'Commercial Coffee Machine Repair',
+    description: 'Commercial coffee machine repair'
+  },
+  {
+    slug: 'commercial-ice-machine',
+    name: 'Commercial Ice Machine',
+    title: 'Commercial Ice Machine Repair',
+    description: 'Commercial ice machine repair services'
+  },
+  {
+    slug: 'commercial-freezer',
+    name: 'Commercial Freezer',
+    title: 'Commercial Freezer Repair',
+    description: 'Commercial freezer repair services'
+  },
+  {
+    slug: 'commercial-microwave',
+    name: 'Commercial Microwave',
+    title: 'Commercial Microwave Repair',
+    description: 'Commercial microwave repair and service'
+  },
+  {
+    slug: 'commercial-dishwasher',
+    name: 'Commercial Dishwasher',
+    title: 'Commercial Dishwasher Repair',
+    description: 'Commercial dishwasher repair services'
+  },
+  {
+    slug: 'commercial-vegetable-washer',
+    name: 'Commercial Vegetable Washer',
+    title: 'Commercial Vegetable Washer Repair',
+    description: 'Commercial vegetable washer repair'
+  },
+  {
+    slug: 'commercial-washer',
+    name: 'Commercial Washer',
+    title: 'Commercial Washer Repair',
+    description: 'Commercial laundry washer repair'
+  },
+  {
+    slug: 'commercial-dryer',
+    name: 'Commercial Dryer',
+    title: 'Commercial Dryer Repair',
+    description: 'Commercial laundry dryer repair'
+  }
+];
+
+// Featured commercial appliances for homepage (4 items)
+export const featuredCommercialAppliances = commercialAppliances.filter(a => a.featured);
+
+
+

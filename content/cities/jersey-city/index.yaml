@@ -1,0 +1,10 @@
+name: jersey-city
+displayName: Jersey City
+county: Hudson
+zipCodes:
+  - '07302'
+  - '07304'
+  - '07305'
+  - '07306'
+  - '07307'
+  - '07310'

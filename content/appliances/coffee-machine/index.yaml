@@ -1,0 +1,13 @@
+name: coffee-machine
+title: Coffee Machine Repair
+description: Coffee machine repair services
+services:
+  - Not brewing
+  - Water not heating
+  - Leaking water
+  - Grinder not working
+  - Milk frother issues
+  - Descaling needed
+  - Display problems
+  - Pump issues
+icon: Wrench

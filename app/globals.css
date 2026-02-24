@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* DISABLE dark mode - always use light theme */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: #ffffff;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fix browser autofill styles for better visibility */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #171717 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  background-color: #ffffff !important;
+  color: #171717 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Ensure all text inputs have dark text */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  color: #171717 !important;
+  background-color: #ffffff !important;
+}
+
+/* Ensure placeholders are visible but not too dark */
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+/* Tawk.to widget positioning - lift it above sticky mobile bar on mobile */
+@media (max-width: 768px) {
+  /* Tawk.to widget container */
+  #tawk-bubble-container,
+  .tawk-button,
+  iframe[title*="chat"] {
+    bottom: 80px !important; /* Lift above sticky bar (60px bar + 20px margin) */
+  }
+  
+  /* When chat window is open */
+  #tawk-container iframe {
+    bottom: 80px !important;
+    max-height: calc(100vh - 160px) !important; /* Account for header and sticky bar */
+  }
+}
