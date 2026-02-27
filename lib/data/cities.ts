@@ -11,6 +11,9 @@ export interface City {
 export const cities: City[] = [
   // Denver County
   { slug: 'denver', name: 'Denver', county: 'denver', zipCodes: ['80201', '80202', '80203', '80204', '80205', '80206', '80207', '80209', '80210', '80211', '80212', '80214', '80216', '80218', '80219', '80220', '80221', '80222', '80223', '80224', '80227', '80230', '80231', '80235', '80236', '80237', '80238', '80239', '80246', '80247', '80249', '80264'] },
+  { slug: 'cherry-creek', name: 'Cherry Creek', county: 'denver', zipCodes: ['80206', '80209', '80246'] },
+  { slug: 'stapleton', name: 'Stapleton / Central Park', county: 'denver', zipCodes: ['80238', '80239', '80249'] },
+  { slug: 'lowry', name: 'Lowry', county: 'denver', zipCodes: ['80230', '80247'] },
 
   // Arapahoe County
   { slug: 'aurora', name: 'Aurora', county: 'arapahoe', zipCodes: ['80010', '80011', '80012', '80013', '80014', '80015', '80016', '80017', '80018', '80019'] },
@@ -21,6 +24,7 @@ export const cities: City[] = [
   { slug: 'cherry-hills-village', name: 'Cherry Hills Village', county: 'arapahoe', zipCodes: ['80113'] },
   { slug: 'sheridan', name: 'Sheridan', county: 'arapahoe', zipCodes: ['80110'] },
   { slug: 'glendale', name: 'Glendale', county: 'arapahoe', zipCodes: ['80246'] },
+  { slug: 'foxfield', name: 'Foxfield', county: 'arapahoe', zipCodes: ['80016'] },
 
   // Jefferson County
   { slug: 'lakewood', name: 'Lakewood', county: 'jefferson', zipCodes: ['80214', '80215', '80226', '80227', '80228', '80232', '80235'] },
@@ -29,6 +33,7 @@ export const cities: City[] = [
   { slug: 'golden', name: 'Golden', county: 'jefferson', zipCodes: ['80401', '80402', '80403'] },
   { slug: 'edgewater', name: 'Edgewater', county: 'jefferson', zipCodes: ['80214'] },
   { slug: 'morrison', name: 'Morrison', county: 'jefferson', zipCodes: ['80465'] },
+  { slug: 'ken-caryl', name: 'Ken Caryl', county: 'jefferson', zipCodes: ['80127', '80128'] },
   { slug: 'evergreen', name: 'Evergreen', county: 'jefferson', zipCodes: ['80437', '80439'] },
   { slug: 'conifer', name: 'Conifer', county: 'jefferson', zipCodes: ['80433'] },
 
@@ -48,7 +53,8 @@ export const cities: City[] = [
   { slug: 'parker', name: 'Parker', county: 'douglas', zipCodes: ['80134', '80138'] },
   { slug: 'lone-tree', name: 'Lone Tree', county: 'douglas', zipCodes: ['80124', '80163'] },
   { slug: 'castle-pines', name: 'Castle Pines', county: 'douglas', zipCodes: ['80108'] },
-  { slug: 'roxborough', name: 'Roxborough', county: 'douglas', zipCodes: ['80125'] },
+  { slug: 'roxborough-park', name: 'Roxborough Park', county: 'douglas', zipCodes: ['80125'] },
+  { slug: 'columbine-valley', name: 'Columbine Valley', county: 'douglas', zipCodes: ['80123'] },
 
   // Boulder County
   { slug: 'boulder', name: 'Boulder', county: 'boulder', zipCodes: ['80301', '80302', '80303', '80304', '80305', '80306', '80309', '80310'] },

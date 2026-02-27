@@ -18,6 +18,10 @@ export const config = {
 const CITY_NAME_TO_SLUG: Record<string, string> = {
   // Denver County
   'Denver': 'denver',
+  'Cherry Creek': 'cherry-creek',
+  'Central Park': 'stapleton',
+  'Stapleton': 'stapleton',
+  'Lowry': 'lowry',
 
   // Arapahoe County
   'Aurora': 'aurora',
@@ -28,6 +32,7 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
   'Cherry Hills Village': 'cherry-hills-village',
   'Sheridan': 'sheridan',
   'Glendale': 'glendale',
+  'Foxfield': 'foxfield',
 
   // Jefferson County
   'Lakewood': 'lakewood',
@@ -36,6 +41,7 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
   'Golden': 'golden',
   'Edgewater': 'edgewater',
   'Morrison': 'morrison',
+  'Ken Caryl': 'ken-caryl',
   'Evergreen': 'evergreen',
   'Conifer': 'conifer',
 
@@ -55,7 +61,8 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
   'Parker': 'parker',
   'Lone Tree': 'lone-tree',
   'Castle Pines': 'castle-pines',
-  'Roxborough': 'roxborough',
+  'Roxborough Park': 'roxborough-park',
+  'Columbine Valley': 'columbine-valley',
 
   // Boulder County
   'Boulder': 'boulder',
