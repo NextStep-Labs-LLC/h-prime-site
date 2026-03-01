@@ -1,12 +1,10 @@
 import { Star } from 'lucide-react';
-import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_BUSINESS_PROFILE_URL } from '@/lib/utils';
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '@/lib/utils';
 
 export default function GoogleRating() {
   return (
     <a
-      href={GOOGLE_BUSINESS_PROFILE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#reviews"
       className="inline-flex items-center gap-3 bg-white px-5 py-3 rounded-full shadow-md hover:shadow-lg transition-all border border-gray-200"
     >
       {/* Google Logo */}
