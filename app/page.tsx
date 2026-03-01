@@ -179,7 +179,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              { name: 'Denver County', slug: 'denver', description: 'Denver' },
+              { name: 'Denver County', slug: 'denver', description: 'Denver, Cherry Creek, Stapleton, Lowry' },
               { name: 'Arapahoe County', slug: 'arapahoe', description: 'Aurora, Centennial, Englewood, Littleton' },
               { name: 'Jefferson County', slug: 'jefferson', description: 'Lakewood, Arvada, Golden, Wheat Ridge' },
               { name: 'Adams County', slug: 'adams', description: 'Westminster, Thornton, Commerce City' },
