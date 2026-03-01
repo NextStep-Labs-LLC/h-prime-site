@@ -105,7 +105,7 @@ export function LocalBusinessSchema({ name, city, county, service }: LocalBusine
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '10',
+      reviewCount: '100',
       bestRating: '5',
       worstRating: '1',
     },

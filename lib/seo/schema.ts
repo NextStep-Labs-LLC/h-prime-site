@@ -10,7 +10,7 @@ const BUSINESS_NAME = 'H-Prime Appliance Repair Services';
 const PHONE = '+17207846766';
 const PHONE_DISPLAY = '(720) 784-6766';
 const GOOGLE_RATING = 5.0;
-const REVIEW_COUNT = 10;
+const REVIEW_COUNT = 100;
 
 export function generateLocalBusinessSchema(params: SchemaParams) {
   const { city, appliance, brand, county } = params;

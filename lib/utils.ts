@@ -22,7 +22,7 @@ export const BUSINESS_EMAIL = 'info@h-prime-co.com';
 export const BUSINESS_NAME = 'H-Prime Appliance Repair Services';
 export const BUSINESS_ADDRESS = 'Denver, CO';
 export const GOOGLE_RATING = 5.0;
-export const GOOGLE_REVIEW_COUNT = '10';
+export const GOOGLE_REVIEW_COUNT = '100';
 export const GOOGLE_BUSINESS_PROFILE_URL = 'https://h-prime-co.com';
 export const SERVICE_CALL_FEE = '$69';
 

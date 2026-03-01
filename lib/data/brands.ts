@@ -3,7 +3,7 @@
 // All logos downloaded as SVG from original site
 
 export const FEATURED_BRANDS = [
-  'whirlpool', 'samsung', 'lg', 'bosch', 'maytag',
+  'whirlpool', 'lg', 'bosch', 'maytag',
   'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'sub-zero',
   'thermador', 'viking', 'wolf', 'miele', 'jennair',
   'fisher-paykel', 'speed-queen', 'panasonic', 'hotpoint', 'sharp'
@@ -18,7 +18,6 @@ export interface Brand {
 export const brands: Brand[] = [
   // Top 20 Featured Brands
   { slug: 'whirlpool', name: 'Whirlpool', logo: '/brands/whirlpool.svg' },
-  { slug: 'samsung', name: 'Samsung', logo: '/brands/samsung.svg' },
   { slug: 'lg', name: 'LG', logo: '/brands/lg.svg' },
   { slug: 'bosch', name: 'Bosch', logo: '/brands/bosch.svg' },
   { slug: 'maytag', name: 'Maytag', logo: '/brands/maytag.svg' },
