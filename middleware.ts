@@ -39,11 +39,8 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
   'Arvada': 'arvada',
   'Wheat Ridge': 'wheat-ridge',
   'Golden': 'golden',
-  'Edgewater': 'edgewater',
   'Morrison': 'morrison',
   'Ken Caryl': 'ken-caryl',
-  'Evergreen': 'evergreen',
-  'Conifer': 'conifer',
 
   // Adams County
   'Westminster': 'westminster',
@@ -51,9 +48,6 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
   'Northglenn': 'northglenn',
   'Federal Heights': 'federal-heights',
   'Commerce City': 'commerce-city',
-  'Brighton': 'brighton',
-  'Henderson': 'henderson',
-  'Bennett': 'bennett',
 
   // Douglas County
   'Castle Rock': 'castle-rock',
@@ -65,23 +59,7 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
   'Columbine Valley': 'columbine-valley',
 
   // Boulder County
-  'Boulder': 'boulder',
   'Broomfield': 'broomfield',
-  'Louisville': 'louisville',
-  'Lafayette': 'lafayette',
-  'Superior': 'superior',
-  'Erie': 'erie',
-  'Longmont': 'longmont',
-  'Niwot': 'niwot',
-
-  // Weld County
-  'Frederick': 'frederick',
-  'Firestone': 'firestone',
-  'Dacono': 'dacono',
-
-  // Elbert County
-  'Elizabeth': 'elizabeth',
-  'Kiowa': 'kiowa',
 };
 
 export function middleware(request: NextRequest) {

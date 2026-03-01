@@ -31,11 +31,8 @@ export const cities: City[] = [
   { slug: 'arvada', name: 'Arvada', county: 'jefferson', zipCodes: ['80001', '80002', '80003', '80004', '80005', '80006', '80007'] },
   { slug: 'wheat-ridge', name: 'Wheat Ridge', county: 'jefferson', zipCodes: ['80033', '80034'] },
   { slug: 'golden', name: 'Golden', county: 'jefferson', zipCodes: ['80401', '80402', '80403'] },
-  { slug: 'edgewater', name: 'Edgewater', county: 'jefferson', zipCodes: ['80214'] },
   { slug: 'morrison', name: 'Morrison', county: 'jefferson', zipCodes: ['80465'] },
   { slug: 'ken-caryl', name: 'Ken Caryl', county: 'jefferson', zipCodes: ['80127', '80128'] },
-  { slug: 'evergreen', name: 'Evergreen', county: 'jefferson', zipCodes: ['80437', '80439'] },
-  { slug: 'conifer', name: 'Conifer', county: 'jefferson', zipCodes: ['80433'] },
 
   // Adams County
   { slug: 'westminster', name: 'Westminster', county: 'adams', zipCodes: ['80003', '80020', '80021', '80023', '80030', '80031', '80234', '80260'] },
@@ -43,9 +40,6 @@ export const cities: City[] = [
   { slug: 'northglenn', name: 'Northglenn', county: 'adams', zipCodes: ['80233', '80234', '80241', '80260'] },
   { slug: 'federal-heights', name: 'Federal Heights', county: 'adams', zipCodes: ['80221', '80260'] },
   { slug: 'commerce-city', name: 'Commerce City', county: 'adams', zipCodes: ['80022', '80037', '80603', '80640'] },
-  { slug: 'brighton', name: 'Brighton', county: 'adams', zipCodes: ['80601', '80602', '80603'] },
-  { slug: 'henderson', name: 'Henderson', county: 'adams', zipCodes: ['80640'] },
-  { slug: 'bennett', name: 'Bennett', county: 'adams', zipCodes: ['80102'] },
 
   // Douglas County
   { slug: 'castle-rock', name: 'Castle Rock', county: 'douglas', zipCodes: ['80104', '80108', '80109'] },
@@ -56,24 +50,8 @@ export const cities: City[] = [
   { slug: 'roxborough-park', name: 'Roxborough Park', county: 'douglas', zipCodes: ['80125'] },
   { slug: 'columbine-valley', name: 'Columbine Valley', county: 'douglas', zipCodes: ['80123'] },
 
-  // Boulder County
-  { slug: 'boulder', name: 'Boulder', county: 'boulder', zipCodes: ['80301', '80302', '80303', '80304', '80305', '80306', '80309', '80310'] },
+  // Boulder County (Broomfield only)
   { slug: 'broomfield', name: 'Broomfield', county: 'boulder', zipCodes: ['80020', '80021', '80023', '80038'] },
-  { slug: 'louisville', name: 'Louisville', county: 'boulder', zipCodes: ['80027'] },
-  { slug: 'lafayette', name: 'Lafayette', county: 'boulder', zipCodes: ['80026'] },
-  { slug: 'superior', name: 'Superior', county: 'boulder', zipCodes: ['80027'] },
-  { slug: 'erie', name: 'Erie', county: 'boulder', zipCodes: ['80516'] },
-  { slug: 'longmont', name: 'Longmont', county: 'boulder', zipCodes: ['80501', '80502', '80503', '80504'] },
-  { slug: 'niwot', name: 'Niwot', county: 'boulder', zipCodes: ['80503'] },
-
-  // Weld County (nearby)
-  { slug: 'frederick', name: 'Frederick', county: 'weld', zipCodes: ['80504', '80530'] },
-  { slug: 'firestone', name: 'Firestone', county: 'weld', zipCodes: ['80504', '80520'] },
-  { slug: 'dacono', name: 'Dacono', county: 'weld', zipCodes: ['80514'] },
-
-  // Elbert County
-  { slug: 'elizabeth', name: 'Elizabeth', county: 'elbert', zipCodes: ['80107'] },
-  { slug: 'kiowa', name: 'Kiowa', county: 'elbert', zipCodes: ['80117'] },
 ];
 
 export function getCitiesByCounty(county: string): City[] {

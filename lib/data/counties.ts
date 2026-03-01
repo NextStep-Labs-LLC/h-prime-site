@@ -6,6 +6,4 @@ export const counties = [
   { slug: 'adams', name: 'Adams County' },
   { slug: 'douglas', name: 'Douglas County' },
   { slug: 'boulder', name: 'Boulder County' },
-  { slug: 'weld', name: 'Weld County' },
-  { slug: 'elbert', name: 'Elbert County' },
 ];
