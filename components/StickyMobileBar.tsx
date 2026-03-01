@@ -65,8 +65,8 @@ export default function StickyMobileBar() {
                 }
                 openModal();
               }}
-              className="flex-1 text-white py-4 text-center font-semibold text-base transition flex items-center justify-center gap-2"
-              style={{ backgroundColor: '#1B2A4A' }}
+              className="flex-1 text-gray-900 py-4 text-center font-semibold text-base transition flex items-center justify-center gap-2"
+              style={{ backgroundColor: '#FFC704' }}
             >
             <Calendar size={20} />
             Request Service
