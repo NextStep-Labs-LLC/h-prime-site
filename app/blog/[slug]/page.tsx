@@ -134,7 +134,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </p>
             <a
               href="tel:+17207846766"
-              className="inline-block px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition cursor-pointer"
+              className="inline-block text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition cursor-pointer"
               style={{ backgroundColor: '#1B2A4A' }}
             >
               Call (720) 784-6766

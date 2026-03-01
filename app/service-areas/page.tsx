@@ -39,7 +39,7 @@ export default function ServiceAreasPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+17207846766"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition cursor-pointer"
+                className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition cursor-pointer"
                 style={{ backgroundColor: '#1B2A4A' }}
               >
                 <Phone className="w-6 h-6" />
@@ -157,7 +157,7 @@ export default function ServiceAreasPage() {
             </p>
             <a
               href="tel:+17207846766"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition cursor-pointer"
+              className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition cursor-pointer"
               style={{ backgroundColor: '#1B2A4A' }}
             >
               <Phone className="w-6 h-6" />
