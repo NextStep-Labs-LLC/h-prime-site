@@ -4,7 +4,9 @@ import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '@/lib/utils';
 export default function GoogleRating() {
   return (
     <a
-      href="#reviews"
+      href="https://share.google/xoQRu9vacRUPORGOA"
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-3 bg-white px-5 py-3 rounded-full shadow-md hover:shadow-lg transition-all border border-gray-200"
     >
       {/* Google Logo */}
