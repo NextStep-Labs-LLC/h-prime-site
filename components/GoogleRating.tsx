@@ -20,7 +20,7 @@ export default function GoogleRating() {
       {/* Rating and Stars */}
       <div className="flex flex-col">
         <div className="flex items-center gap-1 mb-0.5">
-          <span className="text-sm font-semibold text-gray-900">{GOOGLE_RATING}</span>
+          <span className="text-sm font-semibold text-gray-900">{GOOGLE_RATING.toFixed(1)}</span>
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
