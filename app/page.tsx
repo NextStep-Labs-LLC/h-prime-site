@@ -111,7 +111,7 @@ export default function HomePage() {
 
               <p className="text-base md:text-lg leading-relaxed">
                 Our EPA certified and Whirlpool factory-trained technicians provide <strong>same-day service</strong> across the Denver Metro area —
-                Denver, Aurora, Lakewood, Arvada, Boulder, and 45+ surrounding cities. Only $69 diagnostic fee, credited toward your repair.
+                Denver, Aurora, Lakewood, Arvada, and 30+ surrounding cities. Only $69 diagnostic fee, credited toward your repair.
               </p>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
               Service Areas in Denver Metro
             </h2>
             <p className="text-xl text-gray-600">
-              We serve Denver and 45+ surrounding cities across 8 counties
+              We serve Denver and 30+ surrounding cities across 6 counties
             </p>
           </div>
 
@@ -182,11 +182,9 @@ export default function HomePage() {
               { name: 'Denver County', slug: 'denver', description: 'Denver' },
               { name: 'Arapahoe County', slug: 'arapahoe', description: 'Aurora, Centennial, Englewood, Littleton' },
               { name: 'Jefferson County', slug: 'jefferson', description: 'Lakewood, Arvada, Golden, Wheat Ridge' },
-              { name: 'Adams County', slug: 'adams', description: 'Westminster, Thornton, Brighton' },
+              { name: 'Adams County', slug: 'adams', description: 'Westminster, Thornton, Commerce City' },
               { name: 'Douglas County', slug: 'douglas', description: 'Castle Rock, Highlands Ranch, Parker' },
-              { name: 'Boulder County', slug: 'boulder', description: 'Boulder, Broomfield, Louisville, Longmont' },
-              { name: 'Weld County', slug: 'weld', description: 'Frederick, Firestone, Dacono' },
-              { name: 'Elbert County', slug: 'elbert', description: 'Elizabeth, Kiowa' }
+              { name: 'Boulder County', slug: 'boulder', description: 'Broomfield' }
             ].map((area) => (
               <Link
                 key={area.slug}

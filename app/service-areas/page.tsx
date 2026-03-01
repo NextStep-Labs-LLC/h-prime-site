@@ -4,8 +4,8 @@ import { MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Service Areas | Appliance Repair in Denver Metro - Denver, Arapahoe, Jefferson, Adams, Douglas, Boulder, Weld, Elbert Counties',
-  description: 'H-Prime Appliance Repair Services covers 45+ cities in Denver Metro area. Same-day appliance repair in Denver, Arapahoe, Jefferson, Adams, Douglas, Boulder, Weld, and Elbert counties.',
+  title: 'Service Areas | Appliance Repair in Denver Metro - Denver, Arapahoe, Jefferson, Adams, Douglas, Boulder Counties',
+  description: 'H-Prime Appliance Repair Services covers 30+ cities in Denver Metro area. Same-day appliance repair in Denver, Arapahoe, Jefferson, Adams, Douglas, and Boulder counties.',
 };
 
 export default function ServiceAreasPage() {
@@ -31,10 +31,10 @@ export default function ServiceAreasPage() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1f2937' }}>
-              We Serve 45+ Cities in Denver Metro Area
+              We Serve 30+ Cities in Denver Metro Area
             </h1>
             <p className="text-xl md:text-2xl mb-8" style={{ color: '#374151' }}>
-              Same-day appliance repair service available in Denver, Arapahoe, Jefferson, Adams, Douglas, Boulder, Weld, and Elbert counties
+              Same-day appliance repair service available in Denver, Arapahoe, Jefferson, Adams, Douglas, and Boulder counties
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -61,7 +61,7 @@ export default function ServiceAreasPage() {
               <p className="text-base md:text-lg leading-relaxed">
                 For over 20 years, <strong>H-Prime Appliance Repair Services</strong> has been the trusted choice for appliance 
                 repair in Denver Metro area. Our factory-trained technicians provide same-day service to homes and businesses 
-                in Denver, Arapahoe, Jefferson, Adams, Douglas, Boulder, Weld, and Elbert counties.
+                in Denver, Arapahoe, Jefferson, Adams, Douglas, and Boulder counties.
               </p>
               <p className="text-base md:text-lg leading-relaxed">
                 We repair all major brands — LG, Samsung, Whirlpool, GE, Maytag, Bosch, KitchenAid, and more. 
@@ -80,7 +80,7 @@ export default function ServiceAreasPage() {
               Our Service Regions
             </h2>
             <p className="text-xl text-gray-600">
-              Serving 8 counties in Denver Metro area
+              Serving 6 counties in Denver Metro area
             </p>
           </div>
 

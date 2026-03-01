@@ -14,8 +14,8 @@ export async function GET() {
   const baseUrl = 'https://h-prime.vercel.app';
   const now = new Date().toISOString();
 
-  // Top 50 cities by population/importance (Bergen County + major cities)
-  const topCities = cities.slice(0, 50);
+  // All service area cities
+  const topCities = cities.slice(0, 32);
   
   // Top 20 most popular brands
   const topBrands = brands.slice(0, 20);

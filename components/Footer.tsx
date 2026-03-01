@@ -75,7 +75,7 @@ export default function Footer() {
                   href="/service-areas"
                   className="hover:text-white transition text-sm font-semibold"
                 >
-                  View All 45+ Cities →
+                  View All 30+ Cities →
                 </Link>
               </li>
             </ul>
