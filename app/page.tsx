@@ -214,6 +214,99 @@ export default function HomePage() {
 
       {/* Reviews */}
       <Reviews />
+
+      {/* Watch Our Latest Work Tips */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Watch Our Latest Work Tips
+            </h2>
+            <p className="text-lg text-gray-600">
+              Our work is transparent — here, you can see how we are working to do the best for you.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="relative pb-[56.25%]">
+                <iframe
+                  src="https://www.youtube.com/embed/x4Ftt6rVNQQ"
+                  title="How to Replace a Washing Machine Door Gasket"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4 bg-gray-50">
+                <h3 className="font-semibold text-gray-900">How to Replace a Washing Machine Door Gasket</h3>
+              </div>
+            </div>
+
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="relative pb-[56.25%]">
+                <iframe
+                  src="https://www.youtube.com/embed/I-6kq0phckg"
+                  title="Samsung Washer 3E Error Repair"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4 bg-gray-50">
+                <h3 className="font-semibold text-gray-900">Impossible Access! Samsung Washer 3E Error Repair</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="https://www.youtube.com/@H-Prime"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-semibold text-lg hover:underline"
+              style={{ color: '#398ffc' }}
+            >
+              Watch more on our YouTube channel →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Denver Appliance Repair: Common Questions & Answers
+            </h2>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            {[
+              { q: 'Why is my washer not washing properly?', a: 'Common reasons include clogged filters, faulty water inlet valves, detergent buildup, or worn-out agitators. Overloading the washer can also negatively impact its performance.' },
+              { q: 'Why is my washer not spinning properly?', a: 'This can be caused by a worn-out drive belt, faulty motor coupler, or unbalanced loads.' },
+              { q: 'Why is my washer not draining properly?', a: 'This typically occurs due to a clogged drain hose, a blocked pump filter, or a faulty drain pump.' },
+              { q: 'Why is my dryer not drying properly?', a: 'The most common causes are a clogged vent system or faulty sensors inside the dryer.' },
+              { q: 'How long do refrigerators typically last?', a: 'On average, a refrigerator lasts around 15–20 years, depending on maintenance. Regular cleaning of condenser coils and timely service can extend its lifespan.' },
+              { q: 'How do I know if my washer needs repair?', a: 'Common signs include leaks, unusual noises, or stopping mid-cycle.' },
+              { q: 'Are your technicians certified?', a: 'Yes, our technicians are certified, professionally trained, and receive monthly training to stay up to date.' },
+            ].map((faq, i) => (
+              <details key={i} className="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary className="flex items-center justify-between cursor-pointer p-5 font-semibold text-gray-900 hover:text-blue-600 transition">
+                  {faq.q}
+                  <span className="ml-4 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div className="px-5 pb-5 text-gray-600 leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
