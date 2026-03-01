@@ -22,7 +22,7 @@ const SocialIcon = ({ type, size = 16 }: { type: 'facebook' | 'instagram' | 'you
 const SOCIAL_LINKS = [
   { href: 'https://www.facebook.com/HPrimeApplaincerepaire', type: 'facebook' as const, label: 'Facebook' },
   { href: 'https://www.instagram.com/_hprime_', type: 'instagram' as const, label: 'Instagram' },
-  { href: 'https://www.youtube.com/@H-Prime', type: 'youtube' as const, label: 'YouTube' },
+  { href: 'https://www.youtube.com/@MeToTarass', type: 'youtube' as const, label: 'YouTube' },
 ];
 import { useModal } from '@/contexts/ModalContext';
 

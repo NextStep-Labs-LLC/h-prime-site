@@ -263,7 +263,7 @@ export default function HomePage() {
 
           <div className="text-center mt-8">
             <a
-              href="https://www.youtube.com/@H-Prime"
+              href="https://www.youtube.com/@MeToTarass"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block font-semibold text-lg hover:underline"
