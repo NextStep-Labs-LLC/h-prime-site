@@ -54,10 +54,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center -my-2">
             <Image
-              src="/logo-original.jpg"
+              src="/logo-new.png"
               alt="H-Prime Appliance Repair Services"
-              width={280}
-              height={80}
+              width={344}
+              height={121}
               className="h-14 md:h-20 w-auto"
               priority
               quality={95}
