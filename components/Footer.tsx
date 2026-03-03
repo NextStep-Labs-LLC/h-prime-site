@@ -53,6 +53,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li className="pt-2 border-t border-gray-700 mt-2">
+                <Link href="/commercial" className="hover:text-white transition text-sm font-semibold" style={{ color: '#FFC704' }}>
+                  Commercial Services →
+                </Link>
+              </li>
             </ul>
           </div>
 
