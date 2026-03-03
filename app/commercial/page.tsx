@@ -2,8 +2,7 @@ import Hero from '@/components/Hero';
 import Reviews from '@/components/Reviews';
 import { Metadata } from 'next';
 import { Building2, Clock, Wrench, ShieldCheck, PhoneCall, AlertTriangle } from 'lucide-react';
-import Link from 'next/link';
-import { PHONE_DISPLAY, PHONE_NUMBER, BUSINESS_NAME } from '@/lib/utils';
+import { PHONE_DISPLAY, PHONE_NUMBER } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Commercial Appliance Repair in Denver | H-Prime',
@@ -129,7 +128,7 @@ const faqs = [
   },
   {
     q: 'What is the diagnostic fee for commercial appliances?',
-    a: 'Our diagnostic fee is $69 and is credited toward the repair cost if you proceed. We provide a clear estimate before starting any work — no hidden fees.',
+    a: 'Our diagnostic fee for commercial appliances is $99 and is credited toward the repair cost if you proceed. We provide a clear estimate before starting any work — no hidden fees.',
   },
   {
     q: 'Do you offer service contracts for commercial clients?',
@@ -309,7 +308,7 @@ export default function CommercialPage() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Call now for priority scheduling. Same-day service available across Denver Metro.
-            EPA certified technicians, fully insured, $69 diagnostic fee credited toward repair.
+            EPA certified technicians, fully insured, $99 commercial diagnostic fee credited toward repair.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
