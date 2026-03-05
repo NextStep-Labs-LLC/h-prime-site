@@ -15,9 +15,9 @@ export default function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-      <div className="relative w-full max-w-2xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-2xl max-h-[90vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between z-10">
+        <div className="shrink-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between z-10">
           <h2 className="text-xl font-bold text-gray-900">
             Book Appliance Repair Service
           </h2>
@@ -31,13 +31,15 @@ export default function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
         </div>
 
         {/* Workiz Booking iframe */}
-        <iframe
-          src={WORKIZ_BOOKING_URL}
-          width="100%"
-          height="700"
-          style={{ border: 'none' }}
-          title="Book H-Prime Appliance Repair Service"
-        />
+        <div className="flex-1 min-h-0 overflow-y-auto">
+          <iframe
+            src={WORKIZ_BOOKING_URL}
+            width="100%"
+            height="700"
+            style={{ border: 'none', minHeight: '700px' }}
+            title="Book H-Prime Appliance Repair Service"
+          />
+        </div>
       </div>
     </div>
   );
