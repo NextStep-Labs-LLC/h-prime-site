@@ -39,15 +39,12 @@ export default function Header() {
             <MapPin size={14} />
             <span>{BUSINESS_ADDRESS}</span>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="font-semibold" style={{ color: '#FFC704' }}>SAVE $20 ON YOUR FIRST REPAIR!</span>
-            <div className="flex items-center gap-3">
-              {SOCIAL_LINKS.map(({ href, type, label }) => (
-                <a key={type} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/80 hover:text-white transition">
-                  <SocialIcon type={type} size={16} />
-                </a>
-              ))}
-            </div>
+          <div className="flex items-center gap-3">
+            {SOCIAL_LINKS.map(({ href, type, label }) => (
+              <a key={type} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/80 hover:text-white transition">
+                <SocialIcon type={type} size={16} />
+              </a>
+            ))}
           </div>
         </div>
       </div>
