@@ -250,7 +250,7 @@ function formatApplianceName(slug: string): string {
     'freezer': 'Freezer',
     'range-hood': 'Range Hood',
     'ice-maker': 'Ice Maker',
-    'coffee-machine': 'Coffee Machine',
+    'dryer-duct-cleaning': 'Dryer Duct Cleaning',
     'double-oven': 'Built-In Oven',
   };
   

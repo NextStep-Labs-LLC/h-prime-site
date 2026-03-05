@@ -77,12 +77,12 @@ const commercialServices = [
     issues: ['Not maintaining temperature', 'Condensation on glass', 'Lighting failure', 'Fan motor issues', 'Defrost cycle problems'],
   },
   {
-    slug: 'commercial-coffee-machine',
-    title: 'Commercial Coffee Machine Repair',
+    slug: 'dryer-duct-cleaning',
+    title: 'Dryer Duct Cleaning',
     description:
-      'Espresso machines, drip brewers, and bean-to-cup systems for cafes, offices, and restaurants. Quick turnaround to keep your beverage service running.',
-    image: '/assets/appliances/coffee-machine.jpg',
-    issues: ['Pressure issues', 'Grinder malfunction', 'Steam wand clog', 'Scale buildup', 'Brewing temperature problems'],
+      'Professional dryer vent and duct cleaning for homes and commercial laundry facilities. Prevent fire hazards, improve dryer efficiency, and reduce energy costs.',
+    image: '/assets/appliances/dryer-duct-cleaning.jpg',
+    issues: ['Lint buildup removal', 'Vent blockage clearing', 'Fire hazard prevention', 'Airflow restoration', 'Energy efficiency improvement'],
   },
 ];
 

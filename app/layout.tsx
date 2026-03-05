@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { ModalProvider } from '@/contexts/ModalContext';
 import LeadFormModalWrapper from '@/components/LeadFormModalWrapper';
 import StickyMobileBar from '@/components/StickyMobileBar';
+import PromoPopup from '@/components/PromoPopup';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Footer />
           <LeadFormModalWrapper />
           <StickyMobileBar />
+          <PromoPopup />
         </ModalProvider>
       </body>
     </html>

@@ -79,10 +79,6 @@ export default function Hero({ title, subtitle = 'Same-day service, certified te
                 {subtitle}
               </p>
 
-              {/* Promo Banner */}
-              <div className="inline-block mt-3 px-4 py-2 rounded-lg font-bold text-lg" style={{ backgroundColor: '#FFC704', color: '#1B2A4A' }}>
-                SAVE $20 ON YOUR FIRST REPAIR!
-              </div>
             </div>
 
             {/* Bottom Section - Badges & Buttons */}
