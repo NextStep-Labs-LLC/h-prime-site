@@ -123,7 +123,7 @@ export const appliances = [
     name: 'Garbage Disposal',
     title: 'Garbage Disposal Repair',
     description: 'Garbage disposal repair and installation in Denver',
-    image: '/assets/appliances/refrigerator.jpg',
+    image: '/assets/appliances/garbage-disposal.jpg',
     services: [
       'Won\'t turn on',
       'Jammed disposal',
@@ -140,7 +140,7 @@ export const appliances = [
     name: 'Gas Dryer',
     title: 'Gas Dryer Repair',
     description: 'Gas dryer repair services in Denver',
-    image: '/assets/appliances/dryer.jpg',
+    image: '/assets/appliances/gas-dryer.jpg',
     services: [
       'Not heating',
       'Gas igniter problems',
@@ -157,7 +157,7 @@ export const appliances = [
     name: 'Grill & BBQ',
     title: 'Grill & BBQ Repair',
     description: 'Grill and barbecue repair services in Denver',
-    image: '/assets/appliances/oven.jpg',
+    image: '/assets/appliances/grill.jpg',
     services: [
       'Igniter not working',
       'Uneven heating',
@@ -191,7 +191,7 @@ export const appliances = [
     name: 'Microwave',
     title: 'Microwave Repair',
     description: 'Microwave repair services in Denver',
-    image: '/assets/appliances/oven.jpg',
+    image: '/assets/appliances/microwave.jpg',
     services: [
       'Not heating food',
       'Turntable not spinning',
