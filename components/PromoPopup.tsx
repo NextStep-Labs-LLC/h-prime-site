@@ -37,6 +37,10 @@ export default function PromoPopup() {
         event: 'promo_popup_click',
         label: 'save_35_march',
       });
+      (window as any).dataLayer.push({
+        event: 'open_lead_form',
+        label: 'promo_popup',
+      });
     }
     handleDismiss();
     openModal();
