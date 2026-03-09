@@ -9,22 +9,6 @@ export default function HeroCTAButtons() {
 
   return (
     <div className="flex flex-col gap-3 md:gap-4 order-2 md:order-1 md:mb-8">
-      {/* Promo Banner Button - Full Width */}
-      <button
-        onClick={() => {
-          if (typeof window !== 'undefined' && (window as any).dataLayer) {
-            (window as any).dataLayer.push({
-              event: 'open_lead_form',
-              label: 'hero_promo_button'
-            });
-          }
-          openModal();
-        }}
-        className="flex items-center justify-center gap-2 w-full px-6 py-3 md:py-4 rounded-lg font-bold text-lg cursor-pointer transition hover:brightness-90 shadow-lg"
-        style={{ backgroundColor: '#FFC704', color: '#1B2A4A' }}
-      >
-        SAVE $20 ON YOUR FIRST REPAIR!
-      </button>
       {/* Phone & Book Buttons */}
       <div className="flex flex-col md:flex-row gap-3 md:gap-4">
       <a

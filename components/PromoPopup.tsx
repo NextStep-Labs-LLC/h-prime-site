@@ -9,7 +9,7 @@ const CURRENT_MONTH = new Date().toLocaleString('en-US', { month: 'long' });
 export default function PromoPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const { openModal } = useModal();
+  const { isModalOpen, openModal } = useModal();
 
   useEffect(() => {
     // Don't show if already dismissed this session
@@ -46,7 +46,7 @@ export default function PromoPopup() {
     openModal();
   };
 
-  if (isDismissed || !isVisible) return null;
+  if (isDismissed || !isVisible || isModalOpen) return null;
 
   return (
     <div className="fixed bottom-4 right-4 z-[60] animate-slide-up max-w-sm w-full mx-4 md:mx-0">
