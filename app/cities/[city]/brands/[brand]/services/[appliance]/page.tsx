@@ -87,7 +87,7 @@ export default async function CityBrandApplianceRepairPage({ params }: PageProps
       />
       
       <Hero 
-        title={`Same-Day ${brand.name} ${appliance.name} Repair in ${city.name}`}
+        title={`Same-Day ${brand.name} ${appliance.name} Repair in ${city.name} & Surrounding Areas`}
         subtitle="Factory-trained technicians • Genuine parts • Professional service"
         city={city.name}
         brand={brand.name}
