@@ -1,6 +1,7 @@
 import { CheckCircle, Phone, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { PHONE_NUMBER, PHONE_DISPLAY, BUSINESS_NAME } from '@/lib/utils';
+import ThankYouTracker from '@/components/ThankYouTracker';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <section className="py-20 bg-gray-50 min-h-[60vh] flex items-center">
+      <ThankYouTracker />
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <div className="flex justify-center mb-6">

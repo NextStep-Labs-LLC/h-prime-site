@@ -1,9 +1,39 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
 const WORKIZ_BOOKING_URL =
   'https://online-booking.workiz.com/?ac=83c5b14b03e62f92f919b8b4eeb24b5d79e56eebb87e6461f45b9b3a4f852d4e';
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
+
 export default function LeadForm() {
+  const firedRef = useRef(false);
+
+  useEffect(() => {
+    function handleMessage(e: MessageEvent) {
+      if (!e.origin.includes('workiz.com')) return;
+      if (firedRef.current) return;
+
+      const data = typeof e.data === 'string' ? e.data : JSON.stringify(e.data);
+      const isCompletion =
+        /complet|success|done|confirm|thank|finish|book/i.test(data);
+
+      if (isCompletion) {
+        firedRef.current = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'thank_you' });
+      }
+    }
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
   return (
     <section id="lead-form" className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
       <div className="container mx-auto px-4">
