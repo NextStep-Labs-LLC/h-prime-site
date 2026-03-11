@@ -1,16 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 
 const WORKIZ_BOOKING_URL =
   'https://online-booking.workiz.com/?ac=83c5b14b03e62f92f919b8b4eeb24b5d79e56eebb87e6461f45b9b3a4f852d4e';
-
-declare global {
-  interface Window {
-    dataLayer: Record<string, unknown>[];
-  }
-}
 
 interface LeadFormModalProps {
   isOpen: boolean;
@@ -18,33 +11,6 @@ interface LeadFormModalProps {
 }
 
 export default function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
-  const firedRef = useRef(false);
-
-  useEffect(() => {
-    if (!isOpen) {
-      firedRef.current = false;
-      return;
-    }
-
-    function handleMessage(e: MessageEvent) {
-      if (!e.origin.includes('workiz.com')) return;
-      if (firedRef.current) return;
-
-      const data = typeof e.data === 'string' ? e.data : JSON.stringify(e.data);
-      const isCompletion =
-        /complet|success|done|confirm|thank|finish|book/i.test(data);
-
-      if (isCompletion) {
-        firedRef.current = true;
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'thank_you' });
-      }
-    }
-
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, [isOpen]);
-
   if (!isOpen) return null;
 
   return (
