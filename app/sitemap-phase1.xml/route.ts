@@ -11,7 +11,7 @@ import { cities } from '@/lib/data/cities';
  * Wait for 90%+ indexation before moving to Phase 2
  */
 export async function GET() {
-  const baseUrl = 'https://h-prime.vercel.app';
+  const baseUrl = 'https://www.h-prime-co.com';
   const now = new Date().toISOString();
 
   // All service area cities
@@ -65,16 +65,24 @@ export async function GET() {
       priority: 0.8,
     })),
 
+    // Commercial page
+    {
+      url: `${baseUrl}/commercial`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+
     // Legal pages (low priority, but included)
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
+      lastModified: '2025-12-01T00:00:00.000Z',
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms-of-use`,
-      lastModified: now,
+      lastModified: '2025-12-01T00:00:00.000Z',
       changeFrequency: 'yearly',
       priority: 0.3,
     },

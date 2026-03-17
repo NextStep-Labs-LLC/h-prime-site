@@ -5,12 +5,12 @@ interface SchemaParams {
   county?: string;
 }
 
-const SITE_URL = 'https://h-prime.vercel.app';
+const SITE_URL = 'https://www.h-prime-co.com';
 const BUSINESS_NAME = 'H-Prime Appliance Repair Services';
 const PHONE = '+17207846766';
 const PHONE_DISPLAY = '(720) 784-6766';
-const GOOGLE_RATING = 5.0;
-const REVIEW_COUNT = 100;
+const GOOGLE_RATING = 4.9;
+const REVIEW_COUNT = 47;
 
 export function generateLocalBusinessSchema(params: SchemaParams) {
   const { city, appliance, brand, county } = params;
@@ -106,7 +106,7 @@ export function generateBreadcrumbSchema(params: SchemaParams) {
       '@type': 'ListItem',
       position: position++,
       name: formatCityName(city),
-      item: `${SITE_URL}/${city}`,
+      item: `${SITE_URL}/cities/${city}`,
     });
   }
 
@@ -115,7 +115,9 @@ export function generateBreadcrumbSchema(params: SchemaParams) {
       '@type': 'ListItem',
       position: position++,
       name: `${formatBrandName(brand)} Repair`,
-      item: city ? `${SITE_URL}/${city}/${brand}-repair` : `${SITE_URL}/${brand}-repair`,
+      item: city
+        ? `${SITE_URL}/cities/${city}/brands/${brand}-repair`
+        : `${SITE_URL}/brands/${brand}-repair`,
     });
   }
 
@@ -124,7 +126,9 @@ export function generateBreadcrumbSchema(params: SchemaParams) {
       '@type': 'ListItem',
       position: position++,
       name: `${formatApplianceName(appliance)} Repair`,
-      item: city ? `${SITE_URL}/${city}/${appliance}-repair` : `${SITE_URL}/${appliance}-repair`,
+      item: city
+        ? `${SITE_URL}/cities/${city}/services/${appliance}-repair`
+        : `${SITE_URL}/services/${appliance}-repair`,
     });
   }
 
@@ -134,8 +138,8 @@ export function generateBreadcrumbSchema(params: SchemaParams) {
       position: position++,
       name: `${formatBrandName(brand)} ${formatApplianceName(appliance)} Repair`,
       item: city
-        ? `${SITE_URL}/${city}/${brand}/${appliance}-repair`
-        : `${SITE_URL}/${brand}/${appliance}-repair`,
+        ? `${SITE_URL}/cities/${city}/brands/${brand}/services/${appliance}-repair`
+        : `${SITE_URL}/brands/${brand}-repair/services/${appliance}-repair`,
     });
   }
 
@@ -143,6 +147,62 @@ export function generateBreadcrumbSchema(params: SchemaParams) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items,
+  };
+}
+
+export function generateOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}#organization`,
+    name: BUSINESS_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo-original.jpg`,
+    telephone: PHONE,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: PHONE,
+      contactType: 'customer service',
+      areaServed: 'US',
+      availableLanguage: 'English',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Denver',
+      addressRegion: 'CO',
+      addressCountry: 'US',
+    },
+    sameAs: [
+      'https://www.youtube.com/@MeToTarass',
+    ],
+  };
+}
+
+export function generateWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}#website`,
+    name: BUSINESS_NAME,
+    url: SITE_URL,
+    publisher: {
+      '@id': `${SITE_URL}#organization`,
+    },
+  };
+}
+
+export function generateFAQSchema(faqs: { q: string; a: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
   };
 }
 

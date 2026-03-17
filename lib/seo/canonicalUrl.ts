@@ -3,7 +3,7 @@
  * Prevents duplicate content issues by specifying the preferred URL
  */
 
-const BASE_URL = 'https://h-prime.vercel.app';
+const BASE_URL = 'https://www.h-prime-co.com';
 
 /**
  * Generate canonical URL for a path

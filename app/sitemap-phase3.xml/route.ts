@@ -11,7 +11,7 @@ import { cities } from '@/lib/data/cities';
  * Full site launch
  */
 export async function GET() {
-  const baseUrl = 'https://h-prime.vercel.app';
+  const baseUrl = 'https://www.h-prime-co.com';
   const now = new Date().toISOString();
 
   // Remaining cities for City+Appliance (cities 51-362)

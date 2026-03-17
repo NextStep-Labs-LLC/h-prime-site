@@ -11,7 +11,7 @@ import { cities } from '@/lib/data/cities';
  * Focus on local expansion
  */
 export async function GET() {
-  const baseUrl = 'https://h-prime.vercel.app';
+  const baseUrl = 'https://www.h-prime-co.com';
   const now = new Date().toISOString();
 
   // Top 50 cities for City+Appliance combinations

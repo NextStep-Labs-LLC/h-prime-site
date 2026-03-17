@@ -3,12 +3,13 @@ import Reviews from '@/components/Reviews';
 import { Metadata } from 'next';
 import { Building2, Clock, Wrench, ShieldCheck, PhoneCall, AlertTriangle } from 'lucide-react';
 import { PHONE_DISPLAY, PHONE_NUMBER } from '@/lib/utils';
+import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/seo/schema';
 
 export const metadata: Metadata = {
   title: 'Commercial Appliance Repair in Denver | H-Prime',
   description:
     'Professional commercial appliance repair in Denver Metro — restaurants, hotels, laundromats. Same-day service for commercial refrigerators, dishwashers, ice machines, ovens, walk-in coolers and more. EPA certified technicians.',
-  alternates: { canonical: 'https://h-prime-co.com/commercial' },
+  alternates: { canonical: 'https://www.h-prime-co.com/commercial' },
 };
 
 const commercialServices = [
@@ -141,8 +142,21 @@ const faqs = [
 ];
 
 export default function CommercialPage() {
+  const localBusinessSchema = generateLocalBusinessSchema({});
+  const faqSchema = generateFAQSchema(faqs);
+
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Hero */}
       <Hero
         title="Commercial Appliance Repair in Denver"

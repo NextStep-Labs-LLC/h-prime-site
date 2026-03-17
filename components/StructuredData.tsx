@@ -26,15 +26,15 @@ export function LocalBusinessSchema({ name, city, county, service }: LocalBusine
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://h-prime.vercel.app/#organization',
+    '@id': 'https://www.h-prime-co.com/#organization',
     name: businessName,
     legalName: 'H-Prime Appliance Repair Services LLC',
     description: service 
       ? `Professional ${service} service in ${areaServed}. Same-day appointments, 20+ years experience, all major brands.`
       : `Professional appliance repair service in ${areaServed}. Same-day appointments, 20+ years experience, all major brands.`,
-    url: 'https://h-prime.vercel.app',
-    logo: 'https://h-prime.vercel.app/logo.png',
-    image: 'https://h-prime.vercel.app/og-image.jpg',
+    url: 'https://www.h-prime-co.com',
+    logo: 'https://www.h-prime-co.com/logo.png',
+    image: 'https://www.h-prime-co.com/og-image.jpg',
     telephone: PHONE_NUMBER,
     email: BUSINESS_EMAIL,
     priceRange: '$$',
@@ -104,8 +104,8 @@ export function LocalBusinessSchema({ name, city, county, service }: LocalBusine
     }),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '100',
+      ratingValue: '4.9',
+      reviewCount: '47',
       bestRating: '5',
       worstRating: '1',
     },
@@ -175,7 +175,7 @@ export function ServiceSchema({ name, description, url, city, brand }: ServicePr
       name: BUSINESS_NAME,
       telephone: PHONE_NUMBER,
       email: BUSINESS_EMAIL,
-      url: 'https://h-prime.vercel.app',
+      url: 'https://www.h-prime-co.com',
     },
     areaServed: {
       '@type': city ? 'City' : 'State',
@@ -217,8 +217,8 @@ export function WebPageSchema({ title, description, url, datePublished, dateModi
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      '@id': 'https://h-prime.vercel.app/#website',
-      url: 'https://h-prime.vercel.app',
+      '@id': 'https://www.h-prime-co.com/#website',
+      url: 'https://www.h-prime-co.com',
       name: BUSINESS_NAME,
     },
     ...(datePublished && { datePublished }),

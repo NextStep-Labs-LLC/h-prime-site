@@ -8,7 +8,7 @@ interface SEOParams {
 }
 
 const SITE_NAME = 'H-Prime Appliance Repair Services';
-const SITE_URL = 'https://h-prime.vercel.app';
+const SITE_URL = 'https://www.h-prime-co.com';
 const PHONE = '(720) 784-6766';
 
 export function generatePageMetadata(params: SEOParams): Metadata {
@@ -57,23 +57,36 @@ export function generatePageMetadata(params: SEOParams): Metadata {
 
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
+  const canonicalUrl = buildCanonicalUrl(params);
+  const ogImageUrl = `${SITE_URL}/logo-original.jpg`;
+
   return {
     title: fullTitle,
     description,
     openGraph: {
       title: fullTitle,
       description,
+      url: canonicalUrl,
       type: 'website',
       locale: 'en_US',
       siteName: SITE_NAME,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: fullTitle,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
       description,
+      images: [ogImageUrl],
     },
     alternates: {
-      canonical: buildCanonicalUrl(params),
+      canonical: canonicalUrl,
     },
   };
 }
@@ -137,19 +150,19 @@ function buildCanonicalUrl(params: SEOParams): string {
   let path = '';
 
   if (city && brand && appliance) {
-    path = `/${city}/${brand}/${appliance}-repair`;
+    path = `/cities/${city}/brands/${brand}/services/${appliance}-repair`;
   } else if (city && brand) {
-    path = `/${city}/${brand}-repair`;
+    path = `/cities/${city}/brands/${brand}-repair`;
   } else if (city && appliance) {
-    path = `/${city}/${appliance}-repair`;
+    path = `/cities/${city}/services/${appliance}-repair`;
   } else if (brand && appliance) {
-    path = `/${brand}/${appliance}-repair`;
+    path = `/brands/${brand}-repair/services/${appliance}-repair`;
   } else if (city) {
-    path = `/${city}`;
+    path = `/cities/${city}`;
   } else if (brand) {
-    path = `/${brand}-repair`;
+    path = `/brands/${brand}-repair`;
   } else if (appliance) {
-    path = `/${appliance}-repair`;
+    path = `/services/${appliance}-repair`;
   } else {
     path = '/';
   }

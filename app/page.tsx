@@ -6,10 +6,34 @@ import { cities } from '@/lib/data/cities';
 import { CheckCircle, Clock, Users, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/seo/schema';
+
+const homepageFaqs = [
+  { q: 'Why is my washer not washing properly?', a: 'Common reasons include clogged filters, faulty water inlet valves, detergent buildup, or worn-out agitators. Overloading the washer can also negatively impact its performance.' },
+  { q: 'Why is my washer not spinning properly?', a: 'This can be caused by a worn-out drive belt, faulty motor coupler, or unbalanced loads.' },
+  { q: 'Why is my washer not draining properly?', a: 'This typically occurs due to a clogged drain hose, a blocked pump filter, or a faulty drain pump.' },
+  { q: 'Why is my dryer not drying properly?', a: 'The most common causes are a clogged vent system or faulty sensors inside the dryer.' },
+  { q: 'How long do refrigerators typically last?', a: 'On average, a refrigerator lasts around 15–20 years, depending on maintenance. Regular cleaning of condenser coils and timely service can extend its lifespan.' },
+  { q: 'How do I know if my washer needs repair?', a: 'Common signs include leaks, unusual noises, or stopping mid-cycle.' },
+  { q: 'Are your technicians certified?', a: 'Yes, our technicians are certified, professionally trained, and receive monthly training to stay up to date.' },
+];
 
 export default function HomePage() {
+  const localBusinessSchema = generateLocalBusinessSchema({});
+  const faqSchema = generateFAQSchema(homepageFaqs);
+
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Hero Section */}
       <Hero
         title="Denver Appliance Repair Services – Fast & Reliable!"
@@ -285,15 +309,7 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
-            {[
-              { q: 'Why is my washer not washing properly?', a: 'Common reasons include clogged filters, faulty water inlet valves, detergent buildup, or worn-out agitators. Overloading the washer can also negatively impact its performance.' },
-              { q: 'Why is my washer not spinning properly?', a: 'This can be caused by a worn-out drive belt, faulty motor coupler, or unbalanced loads.' },
-              { q: 'Why is my washer not draining properly?', a: 'This typically occurs due to a clogged drain hose, a blocked pump filter, or a faulty drain pump.' },
-              { q: 'Why is my dryer not drying properly?', a: 'The most common causes are a clogged vent system or faulty sensors inside the dryer.' },
-              { q: 'How long do refrigerators typically last?', a: 'On average, a refrigerator lasts around 15–20 years, depending on maintenance. Regular cleaning of condenser coils and timely service can extend its lifespan.' },
-              { q: 'How do I know if my washer needs repair?', a: 'Common signs include leaks, unusual noises, or stopping mid-cycle.' },
-              { q: 'Are your technicians certified?', a: 'Yes, our technicians are certified, professionally trained, and receive monthly training to stay up to date.' },
-            ].map((faq, i) => (
+            {homepageFaqs.map((faq, i) => (
               <details key={i} className="group bg-white rounded-lg shadow-sm border border-gray-200">
                 <summary className="flex items-center justify-between cursor-pointer p-5 font-semibold text-gray-900 hover:text-blue-600 transition">
                   {faq.q}
