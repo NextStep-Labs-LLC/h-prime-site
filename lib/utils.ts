@@ -18,7 +18,7 @@ export function slugToTitle(slug: string): string {
 
 export const PHONE_NUMBER = '+17207846766';
 export const PHONE_DISPLAY = '(720) 784-6766';
-export const BUSINESS_EMAIL = 'info@h-prime-co.com';
+export const BUSINESS_EMAIL = 'h.prime.usa@gmail.com';
 export const BUSINESS_NAME = 'H-Prime Appliance Repair Services';
 export const BUSINESS_ADDRESS = 'Denver, CO';
 export const GOOGLE_RATING = 5.0;
