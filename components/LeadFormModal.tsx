@@ -3,7 +3,7 @@
 import { X } from 'lucide-react';
 
 const WORKIZ_BOOKING_URL =
-  'https://online-booking.workiz.com/?ac=83c5b14b03e62f92f919b8b4eeb24b5d79e56eebb87e6461f45b9b3a4f852d4e';
+  'https://online-booking.workiz.com/?ac=83c5b14b03e62f92f919b8b4eeb24b5d79e56eebb87e6461f45b9b3a4f852d4e&ad_group=Appliance%20Repair';
 
 interface LeadFormModalProps {
   isOpen: boolean;
