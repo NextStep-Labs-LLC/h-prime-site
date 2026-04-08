@@ -52,7 +52,7 @@ export function generatePageMetadata(params: SEOParams): Metadata {
     description = `Expert ${applianceName} repair in the Denver Metro area. Certified technicians, same-day service, all major brands. Call ${PHONE} for professional ${applianceName} repair!`;
   } else {
     title = `${SITE_NAME} | Expert Appliance Repair in Denver, CO`;
-    description = `Professional appliance repair in the Denver Metro area. Same-day service, certified technicians, $69 diagnostic fee. Repair all major brands - refrigerators, washers, dryers & more. Call ${PHONE}!`;
+    description = `Professional appliance repair in the Denver Metro area. Same-day service, certified technicians. Repair all major brands - refrigerators, washers, dryers & more. Call ${PHONE}!`;
   }
 
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;

@@ -24,7 +24,7 @@ export const BUSINESS_ADDRESS = 'Denver, CO';
 export const GOOGLE_RATING = 5.0;
 export const GOOGLE_REVIEW_COUNT = '100';
 export const GOOGLE_BUSINESS_PROFILE_URL = 'https://h-prime-co.com';
-export const SERVICE_CALL_FEE = '$69';
+
 
 // Professional icons (Lucide React style)
 export const icons = {

@@ -218,7 +218,7 @@ function generateBusinessDescription(params: SchemaParams): string {
   } else if (city) {
     return `Professional appliance repair services in ${formatCityName(city)}, CO. All major brands and appliances. Same-day service.`;
   } else {
-    return `Expert appliance repair in the Denver Metro area. EPA certified, same-day service, $69 diagnostic fee for all major brands.`;
+    return `Expert appliance repair in the Denver Metro area. EPA certified, same-day service for all major brands.`;
   }
 }
 

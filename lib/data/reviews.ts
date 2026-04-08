@@ -12,7 +12,7 @@ export interface Review {
 export const reviews: Review[] = [
   {
     author: 'Michelle K.',
-    text: 'Our Samsung refrigerator stopped cooling overnight. Called H-Prime and they sent someone out same day. The technician was professional, explained everything clearly, and had us back up and running in under 2 hours. The $69 diagnostic fee was credited toward the repair. Highly recommend!',
+    text: 'Our Samsung refrigerator stopped cooling overnight. Called H-Prime and they sent someone out same day. The technician was professional, explained everything clearly, and had us back up and running in under 2 hours. Highly recommend!',
     rating: 5,
     date: '2 weeks ago'
   },

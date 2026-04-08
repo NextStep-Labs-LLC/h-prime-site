@@ -22,14 +22,14 @@ const SITE_URL = 'https://www.h-prime-co.com';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'H-Prime Appliance Repair Services | Denver, CO | Same-Day Service',
-  description: 'Professional appliance repair in the Denver Metro area. Same-day service, EPA certified technicians, $69 diagnostic fee. Repair all major brands - refrigerators, washers, dryers & more. Call (720) 784-6766!',
+  description: 'Professional appliance repair in the Denver Metro area. Same-day service, EPA certified technicians. Repair all major brands - refrigerators, washers, dryers & more. Call (720) 784-6766!',
   keywords: 'appliance repair, Denver, Colorado, refrigerator repair, washer repair, dryer repair, same-day service, H-Prime',
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
     title: 'H-Prime Appliance Repair Services | Same-Day Service in Denver, CO',
-    description: 'Professional appliance repair in the Denver Metro area. Same-day service, $69 diagnostic fee.',
+    description: 'Professional appliance repair in the Denver Metro area. Same-day service, certified technicians.',
     url: SITE_URL,
     siteName: 'H-Prime Appliance Repair Services',
     type: 'website',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'H-Prime Appliance Repair Services | Same-Day Service in Denver, CO',
-    description: 'Professional appliance repair in the Denver Metro area. Same-day service, $69 diagnostic fee.',
+    description: 'Professional appliance repair in the Denver Metro area. Same-day service, certified technicians.',
     images: [`${SITE_URL}/logo-original.jpg`],
   },
 };

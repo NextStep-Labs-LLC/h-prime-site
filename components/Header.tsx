@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Top Bar - Service Call Fee */}
+      {/* Top Bar */}
       <div className="hidden md:block w-full py-1.5 text-sm text-white" style={{ backgroundColor: '#1B2A4A' }}>
         <div className="container mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2">

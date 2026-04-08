@@ -128,8 +128,8 @@ const faqs = [
     a: 'We repair most major commercial brands including Hobart, True, Beverage-Air, Manitowoc, Hoshizaki, Continental, Turbo Air, Speed Queen, Electrolux Professional, and many others.',
   },
   {
-    q: 'What is the diagnostic fee for commercial appliances?',
-    a: 'Our diagnostic fee for commercial appliances is $99 and is credited toward the repair cost if you proceed. We provide a clear estimate before starting any work — no hidden fees.',
+    q: 'How does pricing work for commercial appliances?',
+    a: 'We provide a clear estimate before starting any work — no hidden fees. Our technician will diagnose the issue and present you with upfront pricing before proceeding.',
   },
   {
     q: 'Do you offer service contracts for commercial clients?',
@@ -322,7 +322,7 @@ export default function CommercialPage() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Call now for priority scheduling. Same-day service available across Denver Metro.
-            EPA certified technicians, fully insured, $99 commercial diagnostic fee credited toward repair.
+            EPA certified technicians, fully insured, transparent pricing with no hidden fees.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

@@ -49,7 +49,7 @@ export default function ThankYouPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#1B2A4A' }} />
-                <span>Diagnostic fee is only $69 — waived if you proceed with the repair</span>
+                <span>Transparent pricing — no hidden fees or surprises</span>
               </li>
             </ul>
           </div>
