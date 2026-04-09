@@ -1,98 +1,61 @@
-// API route for geolocation testing
-// Edge Runtime for fast IP-based geolocation
+import { NextRequest, NextResponse } from "next/server";
+import { geolocation } from "@vercel/edge";
+import { cities } from "@/lib/data/cities";
 
-import { geolocation } from '@vercel/edge';
-import { NextRequest, NextResponse } from 'next/server';
-import { cities } from '@/lib/data/cities';
+export const runtime = "edge";
 
-export const runtime = 'edge';
+const CITY_NAME_TO_SLUG: Record<string, string> = {};
+for (const city of cities) {
+  CITY_NAME_TO_SLUG[city.name] = city.slug;
+}
+// Test cities
+CITY_NAME_TO_SLUG["Tel Aviv"] = "tel-aviv";
+CITY_NAME_TO_SLUG["Tel Aviv-Yafo"] = "tel-aviv";
+CITY_NAME_TO_SLUG["Holon"] = "holon";
+CITY_NAME_TO_SLUG["Limassol"] = "limassol";
 
-// Build city mapping
-const buildCityMapping = () => {
-  const mapping: Record<string, string> = {};
-  cities.forEach(city => {
-    mapping[city.name] = city.slug;
-  });
-  return mapping;
-};
-
-const CITY_NAME_TO_SLUG = buildCityMapping();
-
-export async function GET(request: NextRequest) {
-  // Get geolocation from Vercel Edge
+export function GET(request: NextRequest) {
   const geo = geolocation(request);
-  
-  const cityName = geo.city;
-  const region = geo.region;
-  const country = geo.country;
-  
-  // Try to map city to slug (NO REGION CHECK!)
+  const rawCityName = geo.city || null;
+  const cityName = rawCityName ? decodeURIComponent(rawCityName) : null;
+
   let citySlug: string | null = null;
   let cityFound = false;
-  let searchAttempts: string[] = [];
-  
+
   if (cityName) {
-    // Direct lookup
-    searchAttempts.push(`Direct: "${cityName}"`);
     citySlug = CITY_NAME_TO_SLUG[cityName] || null;
-    
-    // If not found, try case-insensitive
     if (!citySlug) {
       const cityNameLower = cityName.toLowerCase();
-      searchAttempts.push(`Case-insensitive: "${cityNameLower}"`);
       const matchedKey = Object.keys(CITY_NAME_TO_SLUG).find(
-        key => key.toLowerCase() === cityNameLower
+        (key) => key.toLowerCase() === cityNameLower
       );
       if (matchedKey) {
-        citySlug = CITY_NAME_TO_SLUG[matchedKey];
-        searchAttempts.push(`✅ Found via: "${matchedKey}"`);
+        citySlug = CITY_NAME_TO_SLUG[matchedKey] ?? null;
       }
-    } else {
-      searchAttempts.push(`✅ Found direct match`);
     }
-    
-    // Validate city exists in database
     if (citySlug) {
-      cityFound = cities.some(c => c.slug === citySlug);
+      cityFound = cities.some((c) => c.slug === citySlug);
     }
   }
-  
-  // Get matching cities from database for debugging
-  const allTestCities = cities.filter(c => c.county === 'TEST');
-  const telAvivCities = cities.filter(c => 
-    c.name.toLowerCase().includes('tel aviv') || 
-    c.name.toLowerCase().includes('telaviv')
-  );
-  
-  // Build test URLs
-  const baseUrl = request.nextUrl.origin;
-  const testUrls = {
-    basic: `${baseUrl}/services/refrigerator-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
-    withBrand: `${baseUrl}/brands/samsung/services/refrigerator-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
-    noBrand: `${baseUrl}/services/dryer-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
-  };
-  
-  // Return debug data
+
+  const testUrls = [
+    `/services/refrigerator-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
+    `/services/washer-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
+    `/services/dryer-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
+    `/brands/samsung-repair/services/refrigerator-repair?utm_source=google&utm_medium=cpc&utm_campaign=test`,
+  ];
+
   return NextResponse.json({
-    city: cityName || null,
-    region: region || null,
-    country: country || null,
-    citySlug,
+    city: cityName,
+    slug: citySlug,
     cityFound,
-    timestamp: new Date().toISOString(),
-    requestUrl: request.url,
     testUrls,
-    // DEBUG INFO
     debug: {
-      searchAttempts,
-      totalCitiesInDatabase: cities.length,
-      testCitiesCount: allTestCities.length,
-      testCities: allTestCities.map(c => ({ name: c.name, slug: c.slug })),
-      telAvivMatches: telAvivCities.map(c => ({ name: c.name, slug: c.slug })),
-      cityNameInMapping: cityName ? (cityName in CITY_NAME_TO_SLUG) : false,
-      mappingKeys: Object.keys(CITY_NAME_TO_SLUG).filter(k => 
-        k.toLowerCase().includes('tel') || k.toLowerCase().includes('aviv')
-      ),
-    }
+      geoCity: geo.city,
+      geoRegion: geo.region,
+      geoCountry: geo.country,
+      geoLatitude: geo.latitude,
+      geoLongitude: geo.longitude,
+    },
   });
 }

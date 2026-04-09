@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Clock, Wrench, Users, CheckCircle } from 'lucide-react';
 import Hero from '@/components/Hero';
 import Reviews from '@/components/Reviews';
+import WhyChooseUs from "@/components/WhyChooseUs";
+import BrandsSection from "@/components/BrandsSection";
 import SEOContent from '@/components/SEOContent';
 import { appliances } from '@/lib/data/appliances';
 import { brands } from '@/lib/data/brands';
@@ -200,6 +202,8 @@ export default async function ApplianceRepairPage({ params }: PageProps) {
       </section>
       
       {/* Reviews Section */}
+      <WhyChooseUs />
+      <BrandsSection />
       <Reviews />
     </>
   );

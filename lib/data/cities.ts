@@ -52,6 +52,11 @@ export const cities: City[] = [
 
   // Boulder County (Broomfield only)
   { slug: 'broomfield', name: 'Broomfield', county: 'boulder', zipCodes: ['80020', '80021', '80023', '80038'] },
+
+  // Test cities (for verifying middleware geo-rewrite)
+  { slug: 'holon', name: 'Holon', county: 'test', zipCodes: [] },
+  { slug: 'tel-aviv', name: 'Tel Aviv', county: 'test', zipCodes: [] },
+  { slug: 'limassol', name: 'Limassol', county: 'test', zipCodes: [] },
 ];
 
 export function getCitiesByCounty(county: string): City[] {

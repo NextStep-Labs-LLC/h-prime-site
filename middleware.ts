@@ -60,6 +60,11 @@ const CITY_NAME_TO_SLUG: Record<string, string> = {
 
   // Boulder County
   'Broomfield': 'broomfield',
+  // Test cities
+  'Tel Aviv': 'tel-aviv',
+  'Tel Aviv-Yafo': 'tel-aviv',
+  'Holon': 'holon',
+  'Limassol': 'limassol',
 };
 
 export function middleware(request: NextRequest) {
@@ -74,7 +79,8 @@ export function middleware(request: NextRequest) {
   }
 
   const geo = geolocation(request);
-  const cityName = geo.city;
+  const rawCityName = geo.city;
+  const cityName = rawCityName ? decodeURIComponent(rawCityName) : null;
 
   console.log('[GEO-MIDDLEWARE] Detected location:', {
     city: cityName,

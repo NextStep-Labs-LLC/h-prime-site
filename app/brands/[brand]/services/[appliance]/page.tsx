@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { Wrench, Clock, CheckCircle, Users } from 'lucide-react';
 import Hero from '@/components/Hero';
 import Reviews from '@/components/Reviews';
+import WhyChooseUs from "@/components/WhyChooseUs";
+import BrandsSection from "@/components/BrandsSection";
 import SEOContent from '@/components/SEOContent';
 import { brands } from '@/lib/data/brands';
 import { appliances } from '@/lib/data/appliances';
@@ -125,6 +127,8 @@ export default async function BrandApplianceRepairPage({ params }: PageProps) {
       <SEOContent brand={cleanBrandSlug} appliance={cleanApplianceSlug} />
 
       {/* Reviews Section */}
+      <WhyChooseUs />
+      <BrandsSection />
       <Reviews />
     </>
   );

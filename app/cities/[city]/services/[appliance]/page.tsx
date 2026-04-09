@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import Reviews from '@/components/Reviews';
+import WhyChooseUs from "@/components/WhyChooseUs";
 import SEOContent from '@/components/SEOContent';
 import BrandsSection from '@/components/BrandsSection';
 import { cities, getCitiesByCounty } from '@/lib/data/cities';
@@ -97,6 +98,7 @@ export default async function CityApplianceRepairPage({ params }: PageProps) {
         </section>
       )}
       
+      <WhyChooseUs />
       <Reviews />
     </>
   );
