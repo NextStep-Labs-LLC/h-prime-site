@@ -2,12 +2,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { ModalProvider } from '@/contexts/ModalContext';
 import LeadFormModalWrapper from '@/components/LeadFormModalWrapper';
-import StickyMobileBar from '@/components/StickyMobileBar';
-import PromoPopup from '@/components/PromoPopup';
+import { ChromeTop, ChromeBottom } from '@/components/SiteChrome';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo/schema';
 
 const inter = Inter({
@@ -83,12 +80,10 @@ export default function RootLayout({
           />
         </noscript>
         <ModalProvider>
-          <Header />
+          <ChromeTop />
           <main>{children}</main>
-          <Footer />
           <LeadFormModalWrapper />
-          <StickyMobileBar />
-          <PromoPopup />
+          <ChromeBottom />
         </ModalProvider>
       </body>
     </html>
