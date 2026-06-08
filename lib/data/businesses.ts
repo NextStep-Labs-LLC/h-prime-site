@@ -42,7 +42,7 @@ export const BUSINESSES: Business[] = [
     key: 'gym',
     name: 'Fitness Equipment Repair',
     tagline: 'Treadmills, ellipticals & gym machines — home and commercial',
-    image: '/assets/hub/gym.jpg',
+    image: '/assets/hub/gym.webp',
     url: 'https://www.hprime-gym.com',
     phone: '+17207066650',
     phoneDisplay: '(720) 706-6650',
