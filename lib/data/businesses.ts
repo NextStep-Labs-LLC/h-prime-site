@@ -15,9 +15,9 @@ export type Business = {
   phoneDisplay: string;
   /**
    * Show the Call button with the visible number.
-   * Only true when this number's AWCC (call-conversion) tag is loaded on THIS site,
-   * so calls are actually tracked. Appliance AWCC lives in the main-site GTM; the gym
-   * number's AWCC lives in the separate gym GTM (not on this domain) — so gym = false.
+   * Note: /start is not used in ads, so AWCC call-conversion tracking is not required here.
+   * Appliance calls are still tracked (its AWCC tag lives in the main-site GTM and swaps
+   * the visible number); the gym number is shown for convenience without dedicated tracking.
    */
   showCall: boolean;
   /** Hex accent for the card */
@@ -46,7 +46,9 @@ export const BUSINESSES: Business[] = [
     url: 'https://www.hprime-gym.com',
     phone: '+17207066650',
     phoneDisplay: '(720) 706-6650',
-    showCall: false, // gym AWCC is not on this domain; calls happen on hprime-gym.com
+    // /start is not used in ads, so gym AWCC tracking here is not needed — show the
+    // Call button for convenience. (Ad-attributed gym calls happen on hprime-gym.com.)
+    showCall: true,
     accent: '#1B2A4A',
     enabled: true,
   },
