@@ -21,9 +21,10 @@ export const PHONE_DISPLAY = '(720) 784-6766';
 export const BUSINESS_EMAIL = 'h.prime.usa@gmail.com';
 export const BUSINESS_NAME = 'H-Prime Appliance Repair Services';
 export const BUSINESS_ADDRESS = 'Denver, CO';
+// Live GBP values (checked 2026-07-10, place_id ChIJ6dWdU5D8_WgRf-crfXWkxY8)
 export const GOOGLE_RATING = 5.0;
-export const GOOGLE_REVIEW_COUNT = '100';
-export const GOOGLE_BUSINESS_PROFILE_URL = 'https://h-prime-co.com';
+export const GOOGLE_REVIEW_COUNT = '180';
+export const GOOGLE_BUSINESS_PROFILE_URL = 'https://search.google.com/local/reviews?placeid=ChIJ6dWdU5D8_WgRf-crfXWkxY8';
 
 
 // Professional icons (Lucide React style)

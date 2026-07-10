@@ -6,6 +6,9 @@ import Image from 'next/image';
 export const metadata = {
   title: 'Appliance Repair Tips & Blog | H-Prime Appliance Repair Services',
   description: 'Expert tips, guides, and advice for appliance repair and maintenance. Learn how to keep your appliances running smoothly.',
+  alternates: {
+    canonical: 'https://www.h-prime-co.com/blog',
+  },
 };
 
 // Force dynamic rendering (disable caching)

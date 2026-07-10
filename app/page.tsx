@@ -8,6 +8,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/seo/schema';
 
+export const metadata = {
+  alternates: {
+    canonical: 'https://www.h-prime-co.com',
+  },
+};
+
 const homepageFaqs = [
   { q: 'Why is my washer not washing properly?', a: 'Common reasons include clogged filters, faulty water inlet valves, detergent buildup, or worn-out agitators. Overloading the washer can also negatively impact its performance.' },
   { q: 'Why is my washer not spinning properly?', a: 'This can be caused by a worn-out drive belt, faulty motor coupler, or unbalanced loads.' },

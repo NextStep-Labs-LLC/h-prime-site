@@ -6,6 +6,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Service Areas | Appliance Repair in Denver Metro - Denver, Arapahoe, Jefferson, Adams, Douglas, Boulder Counties',
   description: 'H-Prime Appliance Repair Services covers 30+ cities in Denver Metro area. Same-day appliance repair in Denver, Arapahoe, Jefferson, Adams, Douglas, and Boulder counties.',
+  alternates: {
+    canonical: 'https://www.h-prime-co.com/service-areas',
+  },
 };
 
 export default function ServiceAreasPage() {

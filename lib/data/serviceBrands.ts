@@ -1,22 +1,26 @@
-// Mapping of appliances to brands that manufacture them
+// Mapping of appliances to brands that manufacture them.
+// Slugs MUST match lib/data/appliances.ts and lib/data/brands.ts exactly —
+// this mapping drives the brand lists on service pages, the appliance lists
+// on brand pages, and the phase-3 sitemap (only real brand+appliance pairs).
 export const applianceBrandMapping: Record<string, string[]> = {
-  'refrigerator': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'sub-zero', 'thermador', 'viking', 'jenn-air', 'haier', 'cafe', 'monogram', 'fisher-paykel', 'liebherr', 'marvel', 'true-residential', 'dacor'],
-  'washer': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'frigidaire', 'speed-queen', 'kitchenaid', 'haier', 'cafe', 'fisher-paykel', 'asko', 'bertazzoni', 'miele'],
-  'dryer': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'frigidaire', 'speed-queen', 'kitchenaid', 'haier', 'cafe', 'fisher-paykel', 'asko', 'bertazzoni', 'miele'],
-  'dishwasher': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'bosch', 'kitchenaid', 'maytag', 'frigidaire', 'electrolux', 'kenmore', 'amana', 'thermador', 'miele', 'viking', 'jenn-air', 'cafe', 'fisher-paykel', 'asko', 'bertazzoni', 'dacor', 'gaggenau'],
-  'oven': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'thermador', 'viking', 'jenn-air', 'wolf', 'cafe', 'monogram', 'fisher-paykel', 'bertazzoni', 'dacor', 'gaggenau', 'bluestar', 'capital', 'dcs', 'lynx'],
-  'oven/stove': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'thermador', 'viking', 'jenn-air', 'wolf', 'cafe', 'monogram', 'fisher-paykel', 'bertazzoni', 'dacor', 'gaggenau', 'bluestar', 'capital', 'dcs', 'lynx'],
-  'range': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'thermador', 'viking', 'jenn-air', 'wolf', 'cafe', 'monogram', 'fisher-paykel', 'bertazzoni', 'dacor', 'gaggenau', 'bluestar', 'capital', 'dcs', 'lynx', 'summit'],
-  'cooktop': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'thermador', 'viking', 'jenn-air', 'wolf', 'cafe', 'monogram', 'fisher-paykel', 'bertazzoni', 'dacor', 'gaggenau', 'bluestar', 'miele'],
-  'microwave': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'electrolux', 'kenmore', 'amana', 'sharp', 'panasonic', 'cafe', 'haier'],
-  'freezer': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'kenmore', 'amana', 'sub-zero', 'thermador', 'haier', 'summit', 'danby', 'avanti', 'midea'],
-  'ice-maker': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'frigidaire', 'kitchenaid', 'maytag', 'kenmore', 'scotsman', 'manitowoc', 'u-line', 'marvel'],
-  'range-hood': ['whirlpool', 'ge-appliances', 'frigidaire', 'kitchenaid', 'maytag', 'bosch', 'broan', 'zephyr', 'thermador', 'viking', 'dacor', 'lynx', 'best', 'elica'],
-  'double-oven': ['whirlpool', 'lg', 'samsung', 'ge-appliances', 'ge-profile', 'bosch', 'kitchenaid', 'frigidaire', 'thermador', 'wolf', 'viking', 'jenn-air', 'cafe', 'monogram', 'electrolux', 'fisher-paykel', 'bertazzoni', 'dacor', 'gaggenau', 'miele', 'bluestar'],
-  'garbage-disposal': ['insinkerator', 'ge-appliances', 'whirlpool', 'kitchenaid', 'waste-king', 'moen'],
-  'trash-compactor': ['whirlpool', 'ge-appliances', 'kitchenaid', 'broan'],
-  'wine-cooler': ['sub-zero', 'u-line', 'marvel', 'thermador', 'viking', 'samsung', 'lg', 'whirlpool', 'kitchenaid', 'ge-appliances', 'frigidaire', 'haier', 'dacor', 'electrolux', 'avanti', 'danby', 'summit'],
+  'refrigerator': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'sub-zero', 'thermador', 'viking', 'miele', 'jennair', 'fisher-paykel', 'hotpoint', 'amana', 'ariston', 'haier', 'liebherr', 'monogram', 'dacor', 'danby', 'smeg', 'siemens', 'equator', 'westinghouse', 'roper', 'traulsen', 'turbo-air', 'u-line', 'hoshizaki'],
+  'washer': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'miele', 'fisher-paykel', 'speed-queen', 'hotpoint', 'amana', 'ariston', 'asko', 'haier', 'smeg', 'siemens', 'equator', 'westinghouse', 'roper'],
+  'dryer': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'miele', 'fisher-paykel', 'speed-queen', 'hotpoint', 'amana', 'ariston', 'asko', 'haier', 'smeg', 'siemens', 'equator', 'westinghouse', 'roper'],
+  'gas-dryer': ['whirlpool', 'samsung', 'lg', 'maytag', 'frigidaire', 'ge', 'electrolux', 'fisher-paykel', 'speed-queen', 'hotpoint', 'amana', 'westinghouse', 'roper'],
+  'dishwasher': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'thermador', 'viking', 'miele', 'jennair', 'fisher-paykel', 'hotpoint', 'amana', 'ariston', 'asko', 'cove', 'dacor', 'smeg', 'siemens', 'sharp', 'equator', 'bertazzoni', 'monogram'],
+  'oven': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'thermador', 'viking', 'wolf', 'miele', 'jennair', 'fisher-paykel', 'hotpoint', 'amana', 'ariston', 'dacor', 'monogram', 'smeg', 'siemens', 'bertazzoni', 'capital', 'garland', 'vulcan', 'dynasty', 'westinghouse', 'roper'],
+  'cooktop': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'thermador', 'viking', 'wolf', 'miele', 'jennair', 'fisher-paykel', 'amana', 'dacor', 'monogram', 'smeg', 'siemens', 'bertazzoni', 'capital', 'garland', 'vulcan', 'westinghouse'],
+  'microwave': ['whirlpool', 'samsung', 'lg', 'bosch', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'thermador', 'viking', 'wolf', 'jennair', 'amana', 'sharp', 'panasonic', 'haier', 'danby', 'dacor', 'monogram', 'commercial-chef', 'emerson', 'black-decker', 'westinghouse'],
+  'freezer': ['whirlpool', 'samsung', 'lg', 'maytag', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'sub-zero', 'thermador', 'viking', 'miele', 'jennair', 'fisher-paykel', 'amana', 'haier', 'liebherr', 'monogram', 'danby', 'smeg', 'westinghouse', 'traulsen', 'turbo-air', 'u-line', 'hoshizaki'],
+  'ice-machine': ['whirlpool', 'kitchenaid', 'ge', 'sub-zero', 'viking', 'jennair', 'monogram', 'scotsman', 'hoshizaki', 'ice-o-matic', 'u-line'],
+  'wine-cooler': ['whirlpool', 'samsung', 'lg', 'kitchenaid', 'ge', 'frigidaire', 'electrolux', 'sub-zero', 'thermador', 'viking', 'miele', 'jennair', 'haier', 'liebherr', 'monogram', 'dacor', 'danby', 'smeg', 'u-line', 'vinotemp', 'wine-enthusiast', 'wine-guardian'],
+  'vent-hood': ['whirlpool', 'samsung', 'lg', 'bosch', 'frigidaire', 'kitchenaid', 'ge', 'electrolux', 'thermador', 'viking', 'wolf', 'miele', 'jennair', 'fisher-paykel', 'dacor', 'monogram', 'bertazzoni', 'zephyr', 'faber', 'sirius', 'smeg'],
+  'grill': ['viking', 'wolf', 'kitchenaid', 'monogram', 'alfresco', 'lynx', 'capital', 'dynasty'],
+  'garbage-disposal': ['whirlpool', 'kitchenaid', 'ge', 'badger', 'emerson'],
+  'trash-compactor': ['whirlpool', 'kitchenaid', 'ge', 'jennair'],
 };
+// Brands intentionally not mapped to any appliance page (no matching service):
+// carrier, friedrich, york (HVAC), jura, saeco (coffee), imperia, marcato (pasta equipment)
 
 // Get brands that manufacture a specific appliance
 export const getBrandsForAppliance = (applianceSlug: string): string[] => {
@@ -39,4 +43,3 @@ export const checkBrandApplianceMatch = (brandSlug: string, applianceSlug: strin
   const brands = applianceBrandMapping[applianceSlug];
   return brands ? brands.includes(brandSlug) : false;
 };
-

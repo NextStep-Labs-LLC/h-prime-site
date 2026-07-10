@@ -63,24 +63,26 @@ export function LocalBusinessSchema({ name, city, county, service }: LocalBusine
         name: city,
       }] : []),
     ],
+    // Hours must mirror the Google Business Profile
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '18:00',
+        opens: '07:00',
+        closes: '21:30',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Saturday',
-        opens: '10:00',
-        closes: '16:00',
+        opens: '08:00',
+        closes: '20:00',
       },
     ],
     sameAs: [
-      // Add social media profiles when available
-      // 'https://www.facebook.com/h-prime',
-      // 'https://www.instagram.com/h-prime',
+      'https://www.facebook.com/HPrimeApplaincerepaire',
+      'https://www.instagram.com/_hprime_',
+      'https://www.youtube.com/@MeToTarass',
+      'https://www.google.com/maps/search/?api=1&query=H-Prime%20Appliance%20Repair&query_place_id=ChIJ6dWdU5D8_WgRf-crfXWkxY8',
     ],
     ...(service && {
       hasOfferCatalog: {

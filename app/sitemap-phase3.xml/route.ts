@@ -1,43 +1,27 @@
 import { MetadataRoute } from 'next';
 import { appliances } from '@/lib/data/appliances';
 import { brands } from '@/lib/data/brands';
-import { cities } from '@/lib/data/cities';
+import { checkBrandApplianceMatch } from '@/lib/data/serviceBrands';
 
 /**
- * PHASE 3 SITEMAP (Month 5-6)
- * ~4,200 pages: All City+Appliance, All Brand+Appliance
- * 
- * Strategy: Submit after Phase 2 is 80%+ indexed
- * Full site launch
+ * PHASE 3 SITEMAP
+ * Brand+Appliance combos, only pairs the brand actually manufactures
+ * (filtered via serviceBrands mapping — no thin Sub-Zero-microwave-style pages)
  */
 export async function GET() {
   const baseUrl = 'https://www.h-prime-co.com';
   const now = new Date().toISOString();
 
-  // Remaining cities for City+Appliance (cities 51-362)
-  const remainingCities = cities.slice(50);
-
-  const routes: MetadataRoute.Sitemap = [
-    // City + Appliance for remaining 312 cities (3,432 pages)
-    ...remainingCities.flatMap((city) =>
-      appliances.map((appliance) => ({
-        url: `${baseUrl}/cities/${city.slug}/services/${appliance.slug}-repair`,
-        lastModified: now,
-        changeFrequency: 'monthly' as const,
-        priority: 0.75,
-      }))
-    ),
-
-    // Brand + Appliance for ALL brands (770 pages)
-    ...brands.flatMap((brand) =>
-      appliances.map((appliance) => ({
+  const routes: MetadataRoute.Sitemap = brands.flatMap((brand) =>
+    appliances
+      .filter((appliance) => checkBrandApplianceMatch(brand.slug, appliance.slug))
+      .map((appliance) => ({
         url: `${baseUrl}/brands/${brand.slug}-repair/services/${appliance.slug}-repair`,
         lastModified: now,
         changeFrequency: 'monthly' as const,
         priority: 0.7,
       }))
-    ),
-  ];
+  );
 
   // Generate XML
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

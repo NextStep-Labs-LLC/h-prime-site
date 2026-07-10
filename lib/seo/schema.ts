@@ -9,8 +9,9 @@ const SITE_URL = 'https://www.h-prime-co.com';
 const BUSINESS_NAME = 'H-Prime Appliance Repair Services';
 const PHONE = '+17207846766';
 const PHONE_DISPLAY = '(720) 784-6766';
-const GOOGLE_RATING = 4.9;
-const REVIEW_COUNT = 47;
+// Live GBP values (checked 2026-07-10, place_id ChIJ6dWdU5D8_WgRf-crfXWkxY8)
+const GOOGLE_RATING = 5.0;
+const REVIEW_COUNT = 184;
 
 export function generateLocalBusinessSchema(params: SchemaParams) {
   const { city, appliance, brand, county } = params;
@@ -39,18 +40,19 @@ export function generateLocalBusinessSchema(params: SchemaParams) {
       addressCountry: 'US',
     },
     areaServed: generateAreaServed(params),
+    // Hours must mirror the Google Business Profile
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '18:00',
+        opens: '07:00',
+        closes: '21:30',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Saturday'],
-        opens: '10:00',
-        closes: '16:00',
+        opens: '08:00',
+        closes: '20:00',
       },
     ],
   };
@@ -173,7 +175,10 @@ export function generateOrganizationSchema() {
       addressCountry: 'US',
     },
     sameAs: [
+      'https://www.facebook.com/HPrimeApplaincerepaire',
+      'https://www.instagram.com/_hprime_',
       'https://www.youtube.com/@MeToTarass',
+      'https://www.google.com/maps/search/?api=1&query=H-Prime%20Appliance%20Repair&query_place_id=ChIJ6dWdU5D8_WgRf-crfXWkxY8',
     ],
   };
 }

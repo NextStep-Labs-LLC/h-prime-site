@@ -4,29 +4,15 @@ import { brands } from '@/lib/data/brands';
 import { cities } from '@/lib/data/cities';
 
 /**
- * PHASE 2 SITEMAP (Month 3-4)
- * ~1,500 pages: All cities, City+Appliance for top 50 cities, All brands
- * 
- * Strategy: Submit after Phase 1 is 90%+ indexed
- * Focus on local expansion
+ * PHASE 2 SITEMAP
+ * Remaining brand pages (44) + City+Appliance for all 35 cities (525) — ~569 URLs
  */
 export async function GET() {
   const baseUrl = 'https://www.h-prime-co.com';
   const now = new Date().toISOString();
 
-  // Top 50 cities for City+Appliance combinations
-  const topCities = cities.slice(0, 50);
-
   const routes: MetadataRoute.Sitemap = [
-    // All remaining city pages (312 pages: cities 51-362)
-    ...cities.slice(50).map((city) => ({
-      url: `${baseUrl}/cities/${city.slug}`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.75,
-    })),
-
-    // All remaining brand pages (50 pages: brands 21-70)
+    // Remaining brand pages (brands 21-64)
     ...brands.slice(20).map((brand) => ({
       url: `${baseUrl}/brands/${brand.slug}-repair`,
       lastModified: now,
@@ -34,8 +20,8 @@ export async function GET() {
       priority: 0.7,
     })),
 
-    // City + Appliance for TOP 50 cities (550 pages)
-    ...topCities.flatMap((city) =>
+    // City + Appliance for all 35 cities (525 pages)
+    ...cities.flatMap((city) =>
       appliances.map((appliance) => ({
         url: `${baseUrl}/cities/${city.slug}/services/${appliance.slug}-repair`,
         lastModified: now,

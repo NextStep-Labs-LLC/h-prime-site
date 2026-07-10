@@ -78,30 +78,32 @@ export default async function BrandRepairPage({ params }: PageProps) {
         brandLogo={brand.logo}
       />
       
-      {/* Appliances Section - Filtered */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            {brand.name} Appliances We Service
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {relevantAppliances.map((appliance) => (
-              <Link
-                key={appliance.slug}
-                href={`/brands/${brandSlug}/services/${appliance.slug}-repair`}
-                prefetch={false}
-                className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition text-center border border-gray-200"
-              >
-                <h3 className="font-semibold text-gray-900 text-lg">{appliance.name}</h3>
-                <p className="text-sm text-gray-600 mt-2">
-                  {brand.name} {appliance.name} Repair
-                </p>
-              </Link>
-            ))}
+      {/* Appliances Section - Filtered (hidden for brands with no matching service pages, e.g. HVAC) */}
+      {relevantAppliances.length > 0 && (
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-8">
+              {brand.name} Appliances We Service
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {relevantAppliances.map((appliance) => (
+                <Link
+                  key={appliance.slug}
+                  href={`/brands/${brandSlug}/services/${appliance.slug}-repair`}
+                  prefetch={false}
+                  className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition text-center border border-gray-200"
+                >
+                  <h3 className="font-semibold text-gray-900 text-lg">{appliance.name}</h3>
+                  <p className="text-sm text-gray-600 mt-2">
+                    {brand.name} {appliance.name} Repair
+                  </p>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      
+        </section>
+      )}
+
       {/* Why Choose Us Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
