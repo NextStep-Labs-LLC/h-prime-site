@@ -43,7 +43,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           <p className="text-base md:text-lg leading-relaxed">
             Our {city} technicians have seen it all when it comes to {brand} {appliance.toLowerCase()} repairs. 
             Whether it's a minor issue or a major breakdown, we have the expertise to get your appliance working again. 
-            Call us today at <strong>(720) 784-6766</strong> for fast, professional {brand} appliance repair in {city}.
+            Call us today at <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> for fast, professional {brand} appliance repair in {city}.
           </p>
         </div>
       </div>
@@ -70,7 +70,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           
           <p className="text-base md:text-lg leading-relaxed">
             Our {city} team works on all major appliance brands - LG, Samsung, Whirlpool, GE, Maytag, Bosch, KitchenAid, and more. 
-            Call <strong>(720) 784-6766</strong> for immediate assistance!
+            Call <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> for immediate assistance!
           </p>
         </div>
       </div>
@@ -96,7 +96,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           </p>
           
           <p className="text-base md:text-lg leading-relaxed">
-            Contact us today for expert {brand} appliance repair in {city}. Call <strong>(720) 784-6766</strong> for same-day service!
+            Contact us today for expert {brand} appliance repair in {city}. Call <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> for same-day service!
           </p>
         </div>
       </div>
@@ -122,7 +122,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           </p>
           
           <p className="text-base md:text-lg leading-relaxed">
-            Call <strong>(720) 784-6766</strong> today to schedule your {brand} {appliance.toLowerCase()} repair!
+            Call <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> today to schedule your {brand} {appliance.toLowerCase()} repair!
           </p>
         </div>
       </div>
@@ -148,7 +148,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           </p>
           
           <p className="text-base md:text-lg leading-relaxed">
-            Don't let a broken appliance disrupt your life. Call <strong>(720) 784-6766</strong> now for expert appliance 
+            Don't let a broken appliance disrupt your life. Call <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> now for expert appliance 
             repair in {city}!
           </p>
         </div>
@@ -175,7 +175,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           </p>
           
           <p className="text-base md:text-lg leading-relaxed">
-            Trust the {brand} repair specialists. Call <strong>(720) 784-6766</strong> today for expert service!
+            Trust the {brand} repair specialists. Call <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> today for expert service!
           </p>
         </div>
       </div>
@@ -200,7 +200,7 @@ function renderContent({ city, appliance, brand, county }: any) {
           </p>
           
           <p className="text-base md:text-lg leading-relaxed">
-            Need {appliance.toLowerCase()} repair? Call <strong>(720) 784-6766</strong> for same-day service!
+            Need {appliance.toLowerCase()} repair? Call <a href="tel:7207846766" className="text-[#1B2A4A] underline underline-offset-2 hover:opacity-80 transition"><strong>(720) 784-6766</strong></a> for same-day service!
           </p>
         </div>
       </div>
