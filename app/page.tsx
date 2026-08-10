@@ -6,7 +6,7 @@ import { cities } from '@/lib/data/cities';
 import { CheckCircle, Clock, Users, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/seo/schema';
+import { generateLocalBusinessSchema, generateFAQSchema, generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo/schema';
 
 export const metadata = {
   alternates: {
@@ -27,6 +27,8 @@ const homepageFaqs = [
 export default function HomePage() {
   const localBusinessSchema = generateLocalBusinessSchema({});
   const faqSchema = generateFAQSchema(homepageFaqs);
+  const serviceSchema = generateServiceSchema({});
+  const breadcrumbSchema = generateBreadcrumbSchema({});
 
   return (
     <>
@@ -38,6 +40,14 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
