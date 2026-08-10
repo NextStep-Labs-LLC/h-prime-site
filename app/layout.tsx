@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import { ModalProvider } from '@/contexts/ModalContext';
 import LeadFormModalWrapper from '@/components/LeadFormModalWrapper';
+import UtmCapture from '@/components/UtmCapture';
 import { ChromeTop, ChromeBottom } from '@/components/SiteChrome';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo/schema';
 
@@ -77,6 +78,7 @@ export default function RootLayout({
           />
         </noscript>
         <ModalProvider>
+          <UtmCapture />
           <ChromeTop />
           <main>{children}</main>
           <LeadFormModalWrapper />

@@ -1,9 +1,7 @@
 'use client';
 
 import { X } from 'lucide-react';
-
-const WORKIZ_BOOKING_URL =
-  'https://online-booking.workiz.com/?ac=83c5b14b03e62f92f919b8b4eeb24b5d79e56eebb87e6461f45b9b3a4f852d4e&ad_group=Appliance%20Repair';
+import { getWorkizBookingUrl } from '@/lib/utm';
 
 interface LeadFormModalProps {
   isOpen: boolean;
@@ -12,6 +10,9 @@ interface LeadFormModalProps {
 
 export default function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
   if (!isOpen) return null;
+
+  // Modal only mounts on user click (client-side), safe to read sessionStorage here
+  const bookingUrl = getWorkizBookingUrl();
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
@@ -33,7 +34,7 @@ export default function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
         {/* Workiz Booking iframe */}
         <div className="flex-1 min-h-0 overflow-y-auto">
           <iframe
-            src={WORKIZ_BOOKING_URL}
+            src={bookingUrl}
             width="100%"
             height="700"
             style={{ border: 'none', minHeight: '700px' }}

@@ -1,9 +1,16 @@
 'use client';
 
-const WORKIZ_BOOKING_URL =
-  'https://online-booking.workiz.com/?ac=83c5b14b03e62f92f919b8b4eeb24b5d79e56eebb87e6461f45b9b3a4f852d4e&ad_group=Appliance%20Repair';
+import { useEffect, useState } from 'react';
+import { getWorkizBookingUrl } from '@/lib/utm';
 
 export default function LeadForm() {
+  // Resolved on the client so ad_group reflects the visitor's ads campaign
+  const [bookingUrl, setBookingUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    setBookingUrl(getWorkizBookingUrl());
+  }, []);
+
   return (
     <section id="lead-form" className="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
       <div className="container mx-auto px-4">
@@ -18,14 +25,18 @@ export default function LeadForm() {
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <iframe
-              src={WORKIZ_BOOKING_URL}
-              width="100%"
-              height="700"
-              style={{ border: 'none' }}
-              title="Book H-Prime Appliance Repair Service"
-              loading="lazy"
-            />
+            {bookingUrl ? (
+              <iframe
+                src={bookingUrl}
+                width="100%"
+                height="700"
+                style={{ border: 'none' }}
+                title="Book H-Prime Appliance Repair Service"
+                loading="lazy"
+              />
+            ) : (
+              <div style={{ height: 700 }} aria-hidden="true" />
+            )}
           </div>
         </div>
       </div>
