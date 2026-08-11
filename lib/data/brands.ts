@@ -63,6 +63,7 @@ export const brands: Brand[] = [
   { slug: 'ice-o-matic', name: 'Ice-O-Matic', logo: '/brands/ice-o-matic.svg' },
   { slug: 'imperia', name: 'Imperia', logo: '/brands/imperia.svg' },
   { slug: 'jura', name: 'Jura', logo: '/brands/jura.svg' },
+  { slug: 'kenmore', name: 'Kenmore', logo: '/brands/kenmore.png' },
   { slug: 'liebherr', name: 'Liebherr', logo: '/brands/liebherr.svg' },
   { slug: 'lynx', name: 'Lynx', logo: '/brands/lynx.svg' },
   { slug: 'marcato', name: 'Marcato', logo: '/brands/marcato.svg' },
