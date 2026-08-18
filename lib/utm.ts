@@ -13,6 +13,7 @@ const CAMPAIGN_TO_AD_GROUP: Record<string, string> = {
   '23738369681': 'TR-DM',
   '23742990874': 'GER-DM',
   '24095002203': 'FORT-WORTH',
+  'chatgpt_denver_test': 'CHATGPT',
 };
 
 const WORKIZ_BASE =
@@ -24,7 +25,8 @@ const DEFAULT_AD_GROUP = 'Appliance Repair';
 export function captureUtm(search: string): void {
   try {
     const params = new URLSearchParams(search);
-    if (params.get('utm_source') !== 'google' || params.get('utm_medium') !== 'cpc') return;
+    // google = Google Ads, chatgpt = ChatGPT Ads (OpenAI) test campaign
+    if (!['google', 'chatgpt'].includes(params.get('utm_source') ?? '') || params.get('utm_medium') !== 'cpc') return;
     const campaign = params.get('utm_campaign');
     if (campaign) sessionStorage.setItem(STORAGE_KEY, campaign);
   } catch {
