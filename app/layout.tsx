@@ -6,6 +6,7 @@ import { ModalProvider } from '@/contexts/ModalContext';
 import LeadFormModalWrapper from '@/components/LeadFormModalWrapper';
 import UtmCapture from '@/components/UtmCapture';
 import OpenAIPixel from '@/components/OpenAIPixel';
+import PhoneSwap from '@/components/PhoneSwap';
 import { ChromeTop, ChromeBottom } from '@/components/SiteChrome';
 import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo/schema';
 
@@ -81,6 +82,7 @@ export default function RootLayout({
         <ModalProvider>
           <UtmCapture />
           <OpenAIPixel />
+          <PhoneSwap />
           <ChromeTop />
           <main>{children}</main>
           <LeadFormModalWrapper />
