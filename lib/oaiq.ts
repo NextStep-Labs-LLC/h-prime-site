@@ -53,12 +53,16 @@ export function measureLead() {
   ensureOaiq()?.('measure', 'lead_created', { type: 'customer_action' });
 }
 
-// A phone click counts as a full conversion (same convention as Google Ads
-// Click to Call): lead_created is the standard event that feeds campaign
-// conversion totals and future oCPC optimization; the custom phone_call event
-// only breaks out calls vs forms in reporting — total conversions = lead_created.
+/**
+ * A phone click is intent, not a conversation, so it no longer counts as a
+ * conversion: tapping the number fires only the custom phone_call event, which
+ * stays useful for spotting a tracking gap but feeds no bidding. Same
+ * convention Boost has run since 2026-08-24.
+ *
+ * Real calls become lead_created server-side instead — the DNI bridge forwards
+ * confirmed conversations over CAPI. Conversions in the campaign are therefore
+ * exactly two things: a submitted form, or a call someone actually had.
+ */
 export function measurePhoneCall() {
-  const q = ensureOaiq();
-  q?.('measure', 'lead_created', { type: 'customer_action' });
-  q?.('measure', 'custom', { type: 'custom' }, { custom_event_name: 'phone_call' });
+  ensureOaiq()?.('measure', 'custom', { type: 'custom' }, { custom_event_name: 'phone_call' });
 }

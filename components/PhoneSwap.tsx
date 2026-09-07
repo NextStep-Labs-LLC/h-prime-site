@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { DNI_STORE_KEY, readDniState } from '@/lib/chatgpt-traffic';
 
 // Dynamic number insertion for ChatGPT Ads traffic. Visitors arriving with an
 // OpenAI click token (oppref) or utm_source=chatgpt see the GHL tracking number
@@ -13,29 +14,12 @@ const DNI_TEL = '+19832122955';
 const DNI_DISPLAY = '(983) 212-2955';
 const MAIN_DIGITS = '7207846766';
 const MAIN_TEXT_RE = /\(720\)\s*784-6766|\+?1?[\s. -]?720[\s.-]?784[\s.-]?6766/g;
-const STORE_KEY = 'hp_dni_chatgpt';
 const REPORT_KEY = 'hp_dni_reported';
-// Matches the 30-day attribution window on the OpenAI conversion event.
-const TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const WEBHOOK =
   'https://webhook-processor-production-ae2b.up.railway.app/webhook/hprime-chatgpt-swap';
 
-type SwapState = { oppref: string; ts: number };
-
-function readState(): SwapState | null {
-  try {
-    const raw = localStorage.getItem(STORE_KEY);
-    if (!raw) return null;
-    const s = JSON.parse(raw) as SwapState;
-    if (!s || typeof s.ts !== 'number' || Date.now() - s.ts > TTL_MS) {
-      localStorage.removeItem(STORE_KEY);
-      return null;
-    }
-    return s;
-  } catch {
-    return null;
-  }
-}
+// Storage key, TTL and reader live in lib/chatgpt-traffic so PromoPopup can gate
+// itself on the exact same flag this component writes.
 
 function swapDom() {
   document.querySelectorAll(`a[href*="${MAIN_DIGITS}"]`).forEach((a) => {
@@ -82,10 +66,10 @@ export default function PhoneSwap() {
       oppref.length > 0 || (params.get('utm_source') || '').toLowerCase() === 'chatgpt';
 
     if (fromAd) {
-      const prev = readState();
+      const prev = readDniState();
       try {
         localStorage.setItem(
-          STORE_KEY,
+          DNI_STORE_KEY,
           JSON.stringify({ oppref: oppref || prev?.oppref || '', ts: Date.now() }),
         );
       } catch {
@@ -94,7 +78,7 @@ export default function PhoneSwap() {
       if (oppref) reportSession(oppref);
     }
 
-    if (!fromAd && !readState()) return;
+    if (!fromAd && !readDniState()) return;
 
     swapDom();
     // Client-side navigation and lazy content re-render parts of the DOM with

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X, Tag } from 'lucide-react';
 import { useModal } from '@/contexts/ModalContext';
+import { isChatGptVisitor } from '@/lib/chatgpt-traffic';
 
 const CURRENT_MONTH = new Date().toLocaleString('en-US', { month: 'long' });
 
@@ -12,6 +13,14 @@ export default function PromoPopup() {
   const { isModalOpen, openModal } = useModal();
 
   useEffect(() => {
+    // ChatGPT Ads traffic never sees the promo: that campaign is call-first and
+    // the popup covers the CTA. Covers the landing URL (utm_source=chatgpt* /
+    // oppref) and the 30-day PhoneSwap flag, so it stays hidden on later pages.
+    if (isChatGptVisitor()) {
+      setIsDismissed(true);
+      return;
+    }
+
     // Don't show if already dismissed this session
     if (sessionStorage.getItem('promo-popup-dismissed')) {
       setIsDismissed(true);
@@ -49,7 +58,9 @@ export default function PromoPopup() {
   if (isDismissed || !isVisible || isModalOpen) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-[60] animate-slide-up max-w-sm w-full mx-4 md:mx-0">
+    // Mobile: pinned to both edges so a 384px card can't hang off the left of a
+    // 390px screen (w-full + max-w-sm + mx-4 put its left edge at -26px).
+    <div className="fixed bottom-4 left-4 right-4 z-[60] animate-slide-up md:left-auto md:w-full md:max-w-sm">
       <div
         className="rounded-xl shadow-2xl overflow-hidden border border-gray-200"
         style={{ backgroundColor: '#1B2A4A' }}
